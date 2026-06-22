@@ -53,6 +53,22 @@ class Value extends EventDispatcher {
 
 	}
 
+	show() {
+
+		this.dispatchEvent( { type: 'show' } );
+
+		return this;
+
+	}
+
+	hide() {
+
+		this.dispatchEvent( { type: 'hide' } );
+
+		return this;
+
+	}
+
 }
 
 class ValueNumber extends Value {
@@ -102,7 +118,9 @@ class ValueNumber extends Value {
 		let isDragging = false;
 		let startY, startValue;
 
-		this.input.addEventListener( 'mousedown', ( e ) => {
+		this.input.style.touchAction = 'none';
+
+		this.input.addEventListener( 'pointerdown', ( e ) => {
 
 			isDragging = true;
 			startY = e.clientY;
@@ -111,7 +129,7 @@ class ValueNumber extends Value {
 
 		} );
 
-		document.addEventListener( 'mousemove', ( e ) => {
+		document.addEventListener( 'pointermove', ( e ) => {
 
 			if ( isDragging ) {
 
@@ -144,7 +162,7 @@ class ValueNumber extends Value {
 
 		} );
 
-		document.addEventListener( 'mouseup', () => {
+		document.addEventListener( 'pointerup', () => {
 
 			if ( isDragging ) {
 
@@ -331,6 +349,32 @@ class ValueSelect extends Value {
 
 	}
 
+	setValue( val ) {
+
+		if ( Array.isArray( this.options ) ) {
+
+			this.select.value = val;
+
+		} else {
+
+			const entry = Object.entries( this.options ).find( ( [ , v ] ) => v === val );
+
+			if ( entry ) {
+
+				this.select.value = entry[ 0 ];
+
+			} else {
+
+				this.select.value = val;
+
+			}
+
+		}
+
+		return super.setValue( val );
+
+	}
+
 	getValue() {
 
 		const options = this.options;
@@ -384,9 +428,29 @@ class ValueColor extends Value {
 
 	}
 
+	setValue( val ) {
+
+		const colorHex = this._getColorHex( val );
+
+		this.colorInput.value = colorHex;
+
+		if ( this._value && this._value.isColor ) {
+
+			this._value.setHex( parseInt( colorHex.slice( 1 ), 16 ) );
+
+		} else {
+
+			this._value = val;
+
+		}
+
+		return super.setValue( val );
+
+	}
+
 	_getColorHex( color ) {
 
-		if ( color.isColor ) {
+		if ( color && color.isColor ) {
 
 			color = color.getHex();
 
@@ -394,9 +458,9 @@ class ValueColor extends Value {
 
 		if ( typeof color === 'number' ) {
 
-			color = `#${ color.toString( 16 ) }`;
+			color = '#' + color.toString( 16 ).padStart( 6, '0' );
 
-		} else if ( color[ 0 ] !== '#' ) {
+		} else if ( typeof color === 'string' && color[ 0 ] !== '#' ) {
 
 			color = '#' + color;
 
