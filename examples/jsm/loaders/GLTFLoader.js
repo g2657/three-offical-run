@@ -1786,6 +1786,9 @@ class GLTFMeshGpuInstancing {
 				}
 
 				// Add instance attributes to the geometry, excluding TRS.
+
+				let instanceGeometry = null;
+
 				for ( const attributeName in attributes ) {
 
 					if ( attributeName === '_COLOR_0' ) {
@@ -1797,7 +1800,36 @@ class GLTFMeshGpuInstancing {
 						 attributeName !== 'ROTATION' &&
 						 attributeName !== 'SCALE' ) {
 
-						mesh.geometry.setAttribute( attributeName, attributes[ attributeName ] );
+						if ( instanceGeometry === null ) {
+
+							// do a shallow clone of the goemetry so per-instance data are not shared
+
+							const source = instancedMesh.geometry;
+							instanceGeometry = new BufferGeometry();
+							instanceGeometry.name = source.name;
+
+							for ( const name in source.attributes ) instanceGeometry.setAttribute( name, source.attributes[ name ] );
+							for ( const name in source.morphAttributes ) instanceGeometry.morphAttributes[ name ] = source.morphAttributes[ name ];
+							if ( source.index !== null ) instanceGeometry.setIndex( source.index );
+
+							instanceGeometry.morphTargetsRelative = source.morphTargetsRelative;
+
+							for ( const group of source.groups ) instanceGeometry.addGroup( group.start, group.count, group.materialIndex );
+
+							if ( source.boundingBox !== null ) instanceGeometry.boundingBox = source.boundingBox.clone();
+							if ( source.boundingSphere !== null ) instanceGeometry.boundingSphere = source.boundingSphere.clone();
+
+							instanceGeometry.drawRange.start = source.drawRange.start;
+							instanceGeometry.drawRange.count = source.drawRange.count;
+
+							instanceGeometry.userData = Object.assign( {}, source.userData );
+
+							instancedMesh.geometry = instanceGeometry;
+
+						}
+
+						const attr = attributes[ attributeName ];
+						instanceGeometry.setAttribute( attributeName, new InstancedBufferAttribute( attr.array, attr.itemSize, attr.normalized ) );
 
 					}
 
@@ -3776,6 +3808,18 @@ class GLTFParser {
 
 				}
 
+				// Convert strip/fan primitives to triangles
+
+				if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_STRIP ) {
+
+					geometryPromise = geometryPromise.then( geometry => toTrianglesDrawMode( geometry, TriangleStripDrawMode ) );
+
+				} else if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_FAN ) {
+
+					geometryPromise = geometryPromise.then( geometry => toTrianglesDrawMode( geometry, TriangleFanDrawMode ) );
+
+				}
+
 				// Cache this geometry
 				cache[ cacheKey ] = { primitive: primitive, promise: geometryPromise };
 
@@ -3851,16 +3895,6 @@ class GLTFParser {
 
 						// normalize skin weights to fix malformed assets (see #15319)
 						mesh.normalizeSkinWeights();
-
-					}
-
-					if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_STRIP ) {
-
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, TriangleStripDrawMode );
-
-					} else if ( primitive.mode === WEBGL_CONSTANTS.TRIANGLE_FAN ) {
-
-						mesh.geometry = toTrianglesDrawMode( mesh.geometry, TriangleFanDrawMode );
 
 					}
 
