@@ -20,6 +20,18 @@ export class Style {
 		--color-call: rgba(255, 185, 34, 1);
 		--font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		--font-mono: 'Courier New', Courier, monospace;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+		z-index: 1000;
+	}
+
+	:scope * {
+		pointer-events: auto;
 	}
 
 	.profiler-panel, .profiler-toggle, .detached-tab-panel,
@@ -33,7 +45,7 @@ export class Style {
 	}
 
 	.profiler-toggle {
-		position: fixed;
+		position: absolute;
 		top: 15px;
 		right: 15px;
 		background-color: rgba(30, 30, 36, 0.85);
@@ -41,7 +53,7 @@ export class Style {
 		border-radius: 12px 6px 6px 12px;
 		color: var(--text-primary);
 		cursor: pointer;
-		z-index: 1001;
+		z-index: 1002;
 		transition: all 0.2s ease-in-out;
 		/*font-size: 14px;*/
 		font-size: 15px;
@@ -68,14 +80,14 @@ export class Style {
 		opacity: 0.5;
 	}
 
-	.profiler-toggle.position-right.panel-open {
+	.profiler-toggle.toggle-left {
 		right: auto;
 		left: 15px;
 		border-radius: 6px 12px 12px 6px;
 		flex-direction: row-reverse;
 	}
 
-	.profiler-toggle.position-right.panel-open .builtin-tabs-container {
+	.profiler-toggle.toggle-left .builtin-tabs-container {
 		border-right: none;
 		border-left: 1px solid #262636;
 	}
@@ -227,7 +239,7 @@ export class Style {
 	}
 
 	.profiler-mini-panel {
-		position: fixed;
+		position: absolute;
 		top: 60px;
 		right: 15px;
 		background-color: rgba(30, 30, 36, 0.85);
@@ -252,7 +264,7 @@ export class Style {
 					transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
-	.profiler-mini-panel.position-right.panel-open {
+	.profiler-mini-panel.toggle-left {
 		right: auto;
 		left: 15px;
 	}
@@ -263,20 +275,14 @@ export class Style {
 		transform: translateY(0) scale(1);
 	}
 
-	/* Position toggle and mini-panel at the bottom when maximized */
-	:scope:has(.profiler-panel.maximized) .profiler-toggle,
-	:scope.maximized .profiler-toggle {
-		top: auto !important;
-		bottom: 15px !important;
-		z-index: 10005 !important;
+	.profiler-toggle.toggle-bottom {
+		top: auto;
+		bottom: 15px;
 	}
 
-	:scope:has(.profiler-panel.maximized) .profiler-mini-panel,
-	:scope.maximized .profiler-mini-panel {
-		top: auto !important;
-		bottom: 60px !important;
-		max-height: calc(100vh - 120px) !important;
-		z-index: 10006 !important;
+	.profiler-mini-panel.toggle-bottom {
+		top: auto;
+		bottom: 60px;
 	}
 
 	.profiler-mini-panel::-webkit-scrollbar {
@@ -560,7 +566,7 @@ export class Style {
 	}
 
 	.profiler-panel {
-		position: fixed;
+		position: absolute;
 		z-index: 1001 !important;
 		bottom: 0;
 		left: 0;
@@ -589,7 +595,8 @@ export class Style {
 	}
 
 	.profiler-panel.maximized {
-		height: 100vh;
+		height: 100%;
+		z-index: 10000 !important;
 	}
 
 	/* Position-specific styles */
@@ -1191,6 +1198,7 @@ export class Style {
 
 	.list-children-container.closed {
 		max-height: 0;
+		display: none !important;
 	}
 
 	.item-toggler {
@@ -1689,7 +1697,7 @@ export class Style {
 	}
 
 	.drag-preview-indicator {
-		position: fixed;
+		position: absolute;
 		background-color: rgba(0, 170, 255, 0.2);
 		border: 2px dashed var(--color-accent);
 		z-index: 999;
@@ -1699,7 +1707,7 @@ export class Style {
 
 	/* Detached Tab Windows */
 	.detached-tab-panel {
-		position: fixed;
+		position: absolute;
 		width: 500px;
 		height: 400px;
 		background: var(--profiler-background);
@@ -2039,6 +2047,140 @@ export class Style {
 		overflow: hidden;
 		position: relative;
 		touch-action: none;
+	}
+
+	.node-canvas-wrapper .node-canvas-split-btn {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		background: rgba(30, 30, 36, 0.85);
+		border: 1px solid var(--profiler-border);
+		color: var(--text-primary);
+		border-radius: 4px;
+		padding: 4px;
+		cursor: pointer;
+		opacity: 1;
+		transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		z-index: 10;
+	}
+
+	.node-canvas-wrapper .node-canvas-split-btn:hover {
+		background-color: var(--color-accent);
+		border-color: var(--color-accent);
+		color: white;
+	}
+
+	.node-canvas-wrapper .node-canvas-split-btn.active,
+	.node-canvas-wrapper .node-canvas-fullscreen-btn.active {
+		background-color: var(--color-accent) !important;
+		border-color: var(--color-accent) !important;
+		color: white !important;
+	}
+
+	.split-screen-overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none !important;
+		z-index: 999;
+		touch-action: none;
+	}
+
+	.split-screen-line {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		margin-left: -2px;
+		left: 50%;
+		background: var(--profiler-border);
+		cursor: ew-resize;
+		pointer-events: auto !important;
+		z-index: 10;
+		touch-action: none;
+	}
+
+	.split-screen-line::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -10px;
+		width: 24px;
+		background: transparent;
+		cursor: ew-resize;
+	}
+
+	/* Grid Mode styles for List component */
+	.list-scroll-wrapper:has(> .list-container.grid-mode) {
+		width: 100% !important;
+	}
+
+	.list-container.grid-mode {
+		min-width: 0 !important;
+		width: 100% !important;
+		box-sizing: border-box;
+	}
+
+	.list-container.grid-mode .list-header {
+		display: none !important;
+	}
+
+	.list-container.grid-mode .list-children-container {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 15px;
+		padding-left: 0 !important;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.list-container.grid-mode .list-children-container > .list-item-wrapper {
+		display: inline-block;
+		width: 160px;
+		margin: 0;
+	}
+
+	.list-container.grid-mode .list-children-container > .list-item-wrapper > .list-item-row {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		/*background-color: var(--profiler-header);
+		border: 1px solid var(--profiler-border);*/
+		border-radius: 6px;
+		padding: 8px;
+		gap: 8px;
+		width: 100%;
+		box-sizing: border-box;
+		grid-template-columns: none !important;
+	}
+
+	.list-container.grid-mode .list-children-container > .list-item-wrapper > .list-item-row > .list-item-cell:first-child {
+		width: 140px;
+		height: 140px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.list-container.grid-mode .list-children-container > .list-item-wrapper > .list-item-row > .list-item-cell:not(:first-child) {
+		width: 100%;
+		text-align: center !important;
+		font-size: 11px;
+		font-weight: 500;
+		color: var(--text-primary);
+		white-space: normal;
+		word-break: break-all;
+		justify-content: center !important;
 	}
 
 }
