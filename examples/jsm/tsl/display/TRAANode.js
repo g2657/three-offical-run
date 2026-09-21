@@ -1,4 +1,4 @@
-import { HalfFloatType, Vector2, RenderTarget, RendererUtils, QuadMesh, NodeMaterial, TempNode, NodeUpdateType, Matrix4, DepthTexture, FloatType } from 'three/webgpu';
+import { HalfFloatType, Vector2, RenderTarget, RendererUtils, QuadMesh, NodeMaterial, Node, NodeUpdateType, Matrix4, DepthTexture, FloatType } from 'three/webgpu';
 import { float, Fn, max, texture, uniform, uv, vec2, convertToTexture, passTexture, velocity, ivec2, mix, context, OnBeforeRenderPipeline, OnAfterRenderPipeline } from 'three/tsl';
 import { clipAABB, computeHaltonOffsets, flickerReduction, sampleCurrentDepth, samplePreviousDepth } from '../utils/TAAUtils.js';
 
@@ -17,10 +17,10 @@ let _rendererState;
  *
  * Note: MSAA must be disabled when TRAA is in use.
  *
- * @augments TempNode
+ * @augments Node
  * @three_import import { traa } from 'three/addons/tsl/display/TRAANode.js';
  */
-class TRAANode extends TempNode {
+class TRAANode extends Node {
 
 	static get type() {
 
@@ -237,14 +237,6 @@ class TRAANode extends TempNode {
 		this._previousDepthNode = texture( new DepthTexture( 1, 1 ) );
 
 		/**
-		 * Sync the post processing stack with the TRAA node.
-		 *
-		 * @private
-		 * @type {boolean}
-		 */
-		this._needsPostProcessingSync = false;
-
-		/**
 		 * The node used to render the scene's velocity.
 		 *
 		 * @private
@@ -367,16 +359,6 @@ class TRAANode extends TempNode {
 		const width = beautyRenderTarget.texture.width;
 		const height = beautyRenderTarget.texture.height;
 
-		//
-
-		if ( this._needsPostProcessingSync === true ) {
-
-			this.setViewOffset( width, height );
-
-			this._needsPostProcessingSync = false;
-
-		}
-
 		_rendererState = RendererUtils.resetRendererState( renderer, _rendererState );
 
 		//
@@ -443,11 +425,13 @@ class TRAANode extends TempNode {
 	 */
 	setup( builder ) {
 
+		this.depthNode.build( builder );
+		this.velocityNode.build( builder );
+		this.beautyNode.build( builder );
+
 		if ( builder.renderPipeline && ! builder.context.renderPipelineState.viewOffsetOwner ) {
 
 			builder.context.renderPipelineState.viewOffsetOwner = this;
-
-			this._needsPostProcessingSync = true;
 
 			OnBeforeRenderPipeline( () => {
 
