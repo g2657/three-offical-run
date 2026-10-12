@@ -1,5 +1,5 @@
 import { DataTexture, RenderTarget, RepeatWrapping, Vector2, Vector3, Node, QuadMesh, NodeMaterial, RendererUtils, RedFormat } from 'three/webgpu';
-import { reference, logarithmicDepthToViewZ, viewZToPerspectiveDepth, getNormalFromDepth, getViewPosition, getScreenPositionFromClip, nodeObject, Fn, float, NodeUpdateType, uv, uniform, Loop, vec2, vec3, vec4, int, dot, max, min, pow, abs, If, textureSize, sin, cos, PI, texture, passTexture, mat3, normalize, cross, mix, acos, clamp, interleavedGradientNoise, screenCoordinate, rand, context } from 'three/tsl';
+import { reference, logarithmicDepthToViewZ, viewZToPerspectiveDepth, getNormalFromDepth, getViewPosition, getScreenPositionFromClip, nodeObject, Fn, float, NodeUpdateType, uv, uniform, Loop, vec2, vec3, vec4, int, dot, max, min, pow, abs, If, textureSize, sin, cos, PI, texture, passTexture, mat3, normalize, cross, mix, acos, clamp, interleavedGradientNoise, screenCoordinate, rand, context, isBackgroundDepth } from 'three/tsl';
 
 const _quadMesh = /*@__PURE__*/ new QuadMesh();
 const _size = /*@__PURE__*/ new Vector2();
@@ -418,7 +418,7 @@ class GTAONode extends Node {
 			// Sidestep the nearest-rounding during depth access for the unjittered center pixel to avoid banding
 
 			const g = this.depthNode.gather().sample( uv );
-			const depth = min( min( g.x, g.y ), min( g.z, g.w ) );
+			const depth = builder.renderer.reversedDepthBuffer === true ? max( max( g.x, g.y ), max( g.z, g.w ) ) : min( min( g.x, g.y ), min( g.z, g.w ) );
 
 			return linearizeDepth( depth );
 
@@ -436,21 +436,13 @@ class GTAONode extends Node {
 			return uv.x.greaterThan( 0 ).and( uv.x.lessThan( 1 ) ).and( uv.y.greaterThan( 0 ) ).and( uv.y.lessThan( 1 ) )
 				.and( texel.x.notEqual( centerTexel.x ).or( texel.y.notEqual( centerTexel.y ) ) );
 
-		} ).setLayout( {
-			name: 'isValidSample',
-			type: 'bool',
-			inputs: [
-				{ name: 'uv', type: 'vec2' },
-				{ name: 'centerTexel', type: 'vec2' },
-				{ name: 'size', type: 'vec2' }
-			]
-		} );
+		}, { uv: 'vec2', centerTexel: 'vec2', size: 'vec2', return: 'bool' } );
 
 		this._ao = Fn( () => {
 
 			const depth = this._resolutionScale.lessThan( 1 ).select( sampleCenterDepth( uvNode ), sampleDepth( uvNode ) ).toConst();
 
-			depth.greaterThanEqual( 1.0 ).discard();
+			isBackgroundDepth( depth ).discard();
 
 			const depthSize = vec2( textureSize( this.depthNode, 0 ) ).toConst();
 			const centerTexel = uvNode.mul( depthSize ).floor().toConst();
