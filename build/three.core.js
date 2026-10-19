@@ -2671,98 +2671,84 @@ function setQuaternionFromProperEuler( q, a, b, c, order ) {
 }
 
 /**
- * Denormalizes the given value according to the given typed array.
+ * Returns the factor used by {@link normalize} and {@link denormalize} for the given typed array,
+ * or `undefined` if the values are not scaled (float arrays) or the array type is not supported.
  *
- * @param {number} value - The value to denormalize.
  * @param {TypedArray} array - The typed array that defines the data type of the value.
- * @return {number} The denormalize (float) value in the range `[0,1]`.
+ * @return {number|undefined} The normalization factor.
  */
-function denormalize( value, array ) {
+function getNormalizationScale( array ) {
 
 	switch ( array.constructor ) {
 
-		case Float32Array:
-
-			return value;
-
 		case Uint32Array:
 
-			return value / 4294967295.0;
+			return 4294967295.0;
 
 		case Uint16Array:
 
-			return value / 65535.0;
+			return 65535.0;
 
 		case Uint8Array:
 		case Uint8ClampedArray:
 
-			return value / 255.0;
+			return 255.0;
 
 		case Int32Array:
 
-			return Math.max( value / 2147483647.0, -1 );
+			return 2147483647.0;
 
 		case Int16Array:
 
-			return Math.max( value / 32767.0, -1 );
+			return 32767.0;
 
 		case Int8Array:
 
-			return Math.max( value / 127.0, -1 );
+			return 127.0;
 
 		default:
 
-			throw new Error( 'THREE.MathUtils: Invalid component type.' );
+			return undefined;
 
 	}
 
 }
 
 /**
+ * Denormalizes the given value according to the given typed array.
+ *
+ * @param {number} value - The value to denormalize.
+ * @param {TypedArray} array - The typed array that defines the data type of the value.
+ * @return {number} The denormalized (float) value in the range `[0,1]` or `[-1,1]`
+ */
+function denormalize( value, array ) {
+
+	if ( array.constructor === Float32Array ) return value;
+
+	const scale = getNormalizationScale( array );
+
+	if ( scale === undefined ) throw new Error( 'THREE.MathUtils: Invalid component type.' );
+
+	return Math.max( value / scale, -1 );
+
+}
+
+/**
  * Normalizes the given value according to the given typed array.
  *
- * @param {number} value - The float value in the range `[0,1]` to normalize.
+ * @param {number} value - The float value in the range `[0,1]` or `[-1,1]` to normalize.
  * @param {TypedArray} array - The typed array that defines the data type of the value.
- * @return {number} The normalize value.
+ * @return {number} The normalized value.
  */
 function normalize( value, array ) {
 
-	switch ( array.constructor ) {
+	if ( array.constructor === Float32Array ) return value;
 
-		case Float32Array:
+	const scale = getNormalizationScale( array );
 
-			return value;
+	if ( scale === undefined ) throw new Error( 'THREE.MathUtils: Invalid component type.' );
 
-		case Uint32Array:
-
-			return Math.round( value * 4294967295.0 );
-
-		case Uint16Array:
-
-			return Math.round( value * 65535.0 );
-
-		case Uint8Array:
-		case Uint8ClampedArray:
-
-			return Math.round( value * 255.0 );
-
-		case Int32Array:
-
-			return Math.round( value * 2147483647.0 );
-
-		case Int16Array:
-
-			return Math.round( value * 32767.0 );
-
-		case Int8Array:
-
-			return Math.round( value * 127.0 );
-
-		default:
-
-			throw new Error( 'THREE.MathUtils: Invalid component type.' );
-
-	}
+	return Math.round( value * scale );
 
 }
 
@@ -6795,8 +6781,8 @@ function createColorManagement() {
 		_getMatrix: function ( targetMatrix, sourceColorSpace, targetColorSpace ) {
 
 			return targetMatrix
-				.copy( this.spaces[ sourceColorSpace ].toXYZ )
-				.multiply( this.spaces[ targetColorSpace ].fromXYZ );
+				.copy( this.spaces[ targetColorSpace ].fromXYZ )
+				.multiply( this.spaces[ sourceColorSpace ].toXYZ );
 
 		},
 
@@ -9273,13 +9259,10 @@ class RenderTarget extends EventDispatcher {
 		 */
 		this.textures = [];
 
-		const image = { width: width, height: height, depth: options.depth };
-		const texture = new Texture( image );
-
 		const count = options.count;
 		for ( let i = 0; i < count; i ++ ) {
 
-			this.textures[ i ] = texture.clone();
+			this.textures[ i ] = new Texture( { width: width, height: height, depth: options.depth } );
 			this.textures[ i ].isRenderTargetTexture = true;
 			this.textures[ i ].renderTarget = this;
 
@@ -12260,7 +12243,7 @@ class Object3D extends EventDispatcher {
 
 		/**
 		 * Whether the 3D object is supposed to be static or not. If set to `true`, it means
-		 * the 3D object is not going to be changed after the initial renderer. This includes
+		 * the 3D object is not going to be changed after the first render. This includes
 		 * geometry and material settings. A static 3D object can be processed by the renderer
 		 * slightly faster since certain state checks can be bypassed.
 		 *
@@ -17069,6 +17052,14 @@ class BufferAttribute extends EventDispatcher {
 		 */
 		this.version = 0;
 
+		/**
+		 * Cached normalization factor, see {@link MathUtils#getNormalizationScale}.
+		 *
+		 * @private
+		 * @type {number|undefined}
+		 */
+		this._normalizationScale = array !== undefined ? getNormalizationScale( array ) : undefined;
+
 	}
 
 	/**
@@ -17142,6 +17133,8 @@ class BufferAttribute extends EventDispatcher {
 
 		this.usage = source.usage;
 		this.gpuType = source.gpuType;
+
+		this._normalizationScale = source._normalizationScale;
 
 		return this;
 
@@ -17319,7 +17312,7 @@ class BufferAttribute extends EventDispatcher {
 
 		let value = this.array[ index * this.itemSize + component ];
 
-		if ( this.normalized ) value = denormalize( value, this.array );
+		if ( this.normalized ) value = this._denormalize( value );
 
 		return value;
 
@@ -17335,7 +17328,7 @@ class BufferAttribute extends EventDispatcher {
 	 */
 	setComponent( index, component, value ) {
 
-		if ( this.normalized ) value = normalize( value, this.array );
+		if ( this.normalized ) value = this._normalize( value );
 
 		this.array[ index * this.itemSize + component ] = value;
 
@@ -17353,7 +17346,7 @@ class BufferAttribute extends EventDispatcher {
 
 		let x = this.array[ index * this.itemSize ];
 
-		if ( this.normalized ) x = denormalize( x, this.array );
+		if ( this.normalized ) x = this._denormalize( x );
 
 		return x;
 
@@ -17368,7 +17361,7 @@ class BufferAttribute extends EventDispatcher {
 	 */
 	setX( index, x ) {
 
-		if ( this.normalized ) x = normalize( x, this.array );
+		if ( this.normalized ) x = this._normalize( x );
 
 		this.array[ index * this.itemSize ] = x;
 
@@ -17386,7 +17379,7 @@ class BufferAttribute extends EventDispatcher {
 
 		let y = this.array[ index * this.itemSize + 1 ];
 
-		if ( this.normalized ) y = denormalize( y, this.array );
+		if ( this.normalized ) y = this._denormalize( y );
 
 		return y;
 
@@ -17401,7 +17394,7 @@ class BufferAttribute extends EventDispatcher {
 	 */
 	setY( index, y ) {
 
-		if ( this.normalized ) y = normalize( y, this.array );
+		if ( this.normalized ) y = this._normalize( y );
 
 		this.array[ index * this.itemSize + 1 ] = y;
 
@@ -17419,7 +17412,7 @@ class BufferAttribute extends EventDispatcher {
 
 		let z = this.array[ index * this.itemSize + 2 ];
 
-		if ( this.normalized ) z = denormalize( z, this.array );
+		if ( this.normalized ) z = this._denormalize( z );
 
 		return z;
 
@@ -17434,7 +17427,7 @@ class BufferAttribute extends EventDispatcher {
 	 */
 	setZ( index, z ) {
 
-		if ( this.normalized ) z = normalize( z, this.array );
+		if ( this.normalized ) z = this._normalize( z );
 
 		this.array[ index * this.itemSize + 2 ] = z;
 
@@ -17452,7 +17445,7 @@ class BufferAttribute extends EventDispatcher {
 
 		let w = this.array[ index * this.itemSize + 3 ];
 
-		if ( this.normalized ) w = denormalize( w, this.array );
+		if ( this.normalized ) w = this._denormalize( w );
 
 		return w;
 
@@ -17467,7 +17460,7 @@ class BufferAttribute extends EventDispatcher {
 	 */
 	setW( index, w ) {
 
-		if ( this.normalized ) w = normalize( w, this.array );
+		if ( this.normalized ) w = this._normalize( w );
 
 		this.array[ index * this.itemSize + 3 ] = w;
 
@@ -17489,8 +17482,8 @@ class BufferAttribute extends EventDispatcher {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
 
 		}
 
@@ -17516,9 +17509,9 @@ class BufferAttribute extends EventDispatcher {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
-			z = normalize( z, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
+			z = this._normalize( z );
 
 		}
 
@@ -17546,10 +17539,10 @@ class BufferAttribute extends EventDispatcher {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
-			z = normalize( z, this.array );
-			w = normalize( w, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
+			z = this._normalize( z );
+			w = this._normalize( w );
 
 		}
 
@@ -17612,11 +17605,37 @@ class BufferAttribute extends EventDispatcher {
 	}
 
 	/**
-	 * Can be used to dispose storage buffer attributes. Available only in {@link WebGPURenderer}.
+	 * Frees the GPU-related resources allocated by this instance. Available only in {@link WebGPURenderer}.
 	 */
 	dispose() {
 
 		this.dispatchEvent( { type: 'dispose' } );
+
+	}
+
+	/**
+	 * Denormalizes the value using cached normalization factor.
+	 *
+	 * @private
+	 */
+	_denormalize( value ) {
+
+		const scale = this._normalizationScale;
+
+		return scale !== undefined ? Math.max( value / scale, -1 ) : denormalize( value, this.array );
+
+	}
+
+	/**
+	 * Normalizes the value using cached normalization factor.
+	 *
+	 * @private
+	 */
+	_normalize( value ) {
+
+		const scale = this._normalizationScale;
+
+		return scale !== undefined ? Math.round( value * scale ) : normalize( value, this.array );
 
 	}
 
@@ -20213,6 +20232,14 @@ class InterleavedBufferAttribute {
 		 */
 		this.normalized = normalized;
 
+		/**
+		 * Cached normalization factor, see {@link MathUtils#getNormalizationScale}.
+		 *
+		 * @private
+		 * @type {number|undefined}
+		 */
+		this._normalizationScale = interleavedBuffer !== undefined ? getNormalizationScale( interleavedBuffer.array ) : undefined;
+
 	}
 
 	/**
@@ -20332,7 +20359,7 @@ class InterleavedBufferAttribute {
 
 		let value = this.array[ index * this.data.stride + this.offset + component ];
 
-		if ( this.normalized ) value = denormalize( value, this.array );
+		if ( this.normalized ) value = this._denormalize( value );
 
 		return value;
 
@@ -20348,7 +20375,7 @@ class InterleavedBufferAttribute {
 	 */
 	setComponent( index, component, value ) {
 
-		if ( this.normalized ) value = normalize( value, this.array );
+		if ( this.normalized ) value = this._normalize( value );
 
 		this.data.array[ index * this.data.stride + this.offset + component ] = value;
 
@@ -20365,7 +20392,7 @@ class InterleavedBufferAttribute {
 	 */
 	setX( index, x ) {
 
-		if ( this.normalized ) x = normalize( x, this.array );
+		if ( this.normalized ) x = this._normalize( x );
 
 		this.data.array[ index * this.data.stride + this.offset ] = x;
 
@@ -20382,7 +20409,7 @@ class InterleavedBufferAttribute {
 	 */
 	setY( index, y ) {
 
-		if ( this.normalized ) y = normalize( y, this.array );
+		if ( this.normalized ) y = this._normalize( y );
 
 		this.data.array[ index * this.data.stride + this.offset + 1 ] = y;
 
@@ -20399,7 +20426,7 @@ class InterleavedBufferAttribute {
 	 */
 	setZ( index, z ) {
 
-		if ( this.normalized ) z = normalize( z, this.array );
+		if ( this.normalized ) z = this._normalize( z );
 
 		this.data.array[ index * this.data.stride + this.offset + 2 ] = z;
 
@@ -20416,7 +20443,7 @@ class InterleavedBufferAttribute {
 	 */
 	setW( index, w ) {
 
-		if ( this.normalized ) w = normalize( w, this.array );
+		if ( this.normalized ) w = this._normalize( w );
 
 		this.data.array[ index * this.data.stride + this.offset + 3 ] = w;
 
@@ -20434,7 +20461,7 @@ class InterleavedBufferAttribute {
 
 		let x = this.data.array[ index * this.data.stride + this.offset ];
 
-		if ( this.normalized ) x = denormalize( x, this.array );
+		if ( this.normalized ) x = this._denormalize( x );
 
 		return x;
 
@@ -20450,7 +20477,7 @@ class InterleavedBufferAttribute {
 
 		let y = this.data.array[ index * this.data.stride + this.offset + 1 ];
 
-		if ( this.normalized ) y = denormalize( y, this.array );
+		if ( this.normalized ) y = this._denormalize( y );
 
 		return y;
 
@@ -20466,7 +20493,7 @@ class InterleavedBufferAttribute {
 
 		let z = this.data.array[ index * this.data.stride + this.offset + 2 ];
 
-		if ( this.normalized ) z = denormalize( z, this.array );
+		if ( this.normalized ) z = this._denormalize( z );
 
 		return z;
 
@@ -20482,7 +20509,7 @@ class InterleavedBufferAttribute {
 
 		let w = this.data.array[ index * this.data.stride + this.offset + 3 ];
 
-		if ( this.normalized ) w = denormalize( w, this.array );
+		if ( this.normalized ) w = this._denormalize( w );
 
 		return w;
 
@@ -20502,8 +20529,8 @@ class InterleavedBufferAttribute {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
 
 		}
 
@@ -20529,9 +20556,9 @@ class InterleavedBufferAttribute {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
-			z = normalize( z, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
+			z = this._normalize( z );
 
 		}
 
@@ -20559,10 +20586,10 @@ class InterleavedBufferAttribute {
 
 		if ( this.normalized ) {
 
-			x = normalize( x, this.array );
-			y = normalize( y, this.array );
-			z = normalize( z, this.array );
-			w = normalize( w, this.array );
+			x = this._normalize( x );
+			y = this._normalize( y );
+			z = this._normalize( z );
+			w = this._normalize( w );
 
 		}
 
@@ -20687,6 +20714,32 @@ class InterleavedBufferAttribute {
 			};
 
 		}
+
+	}
+
+	/**
+	 * Denormalizes the value using cached normalization factor.
+	 *
+	 * @private
+	 */
+	_denormalize( value ) {
+
+		const scale = this._normalizationScale;
+
+		return scale !== undefined ? Math.max( value / scale, -1 ) : denormalize( value, this.data.array );
+
+	}
+
+	/**
+	 * Normalizes the value using cached normalization factor.
+	 *
+	 * @private
+	 */
+	_normalize( value ) {
+
+		const scale = this._normalizationScale;
+
+		return scale !== undefined ? Math.round( value * scale ) : normalize( value, this.data.array );
 
 	}
 
@@ -21825,7 +21878,8 @@ class Material extends EventDispatcher {
 
 		if ( this.iridescence !== undefined ) data.iridescence = this.iridescence;
 		if ( this.iridescenceIOR !== undefined ) data.iridescenceIOR = this.iridescenceIOR;
-		if ( this.iridescenceThicknessRange !== undefined ) data.iridescenceThicknessRange = this.iridescenceThicknessRange;
+		if ( this.iridescenceThicknessMinimum !== undefined ) data.iridescenceThicknessMinimum = this.iridescenceThicknessMinimum;
+		if ( this.iridescenceThicknessMaximum !== undefined ) data.iridescenceThicknessMaximum = this.iridescenceThicknessMaximum;
 
 		if ( this.iridescenceMap && this.iridescenceMap.isTexture ) {
 
@@ -22017,7 +22071,16 @@ class Material extends EventDispatcher {
 		if ( json.retroreflectivity !== undefined ) this.retroreflectivity = json.retroreflectivity;
 		if ( json.iridescence !== undefined ) this.iridescence = json.iridescence;
 		if ( json.iridescenceIOR !== undefined ) this.iridescenceIOR = json.iridescenceIOR;
-		if ( json.iridescenceThicknessRange !== undefined ) this.iridescenceThicknessRange = json.iridescenceThicknessRange;
+		if ( json.iridescenceThicknessMinimum !== undefined ) this.iridescenceThicknessMinimum = json.iridescenceThicknessMinimum;
+		if ( json.iridescenceThicknessMaximum !== undefined ) this.iridescenceThicknessMaximum = json.iridescenceThicknessMaximum;
+
+		if ( json.iridescenceThicknessRange !== undefined ) { // @deprecated r187
+
+			this.iridescenceThicknessMinimum = json.iridescenceThicknessRange[ 0 ];
+			this.iridescenceThicknessMaximum = json.iridescenceThicknessRange[ 1 ];
+
+		}
+
 		if ( json.transmission !== undefined ) this.transmission = json.transmission;
 		if ( json.thickness !== undefined ) this.thickness = json.thickness;
 		if ( json.attenuationDistance !== undefined ) this.attenuationDistance = json.attenuationDistance;
@@ -25045,6 +25108,15 @@ class Skeleton {
 		this.boneMatrices = null;
 
 		/**
+		 * An array buffer holding the bone data of the previous frame.
+		 * Required for computing velocity.
+		 *
+		 * @type {?Float32Array}
+		 * @default null
+		 */
+		this.previousBoneMatrices = null;
+
+		/**
 		 * A texture holding the bone data for use
 		 * in the vertex shader.
 		 *
@@ -25052,6 +25124,15 @@ class Skeleton {
 		 * @default null
 		 */
 		this.boneTexture = null;
+
+		/**
+		 * A texture holding the bone data of the previous frame.
+		 * Required for computing velocity.
+		 *
+		 * @type {?DataTexture}
+		 * @default null
+		 */
+		this.previousBoneTexture = null;
 
 		this.init();
 
@@ -25276,6 +25357,14 @@ class Skeleton {
 			this.boneTexture.dispose();
 
 			this.boneTexture = null;
+
+		}
+
+		if ( this.previousBoneTexture !== null ) {
+
+			this.previousBoneTexture.dispose();
+
+			this.previousBoneTexture = null;
 
 		}
 
@@ -27654,7 +27743,7 @@ class BatchedMesh extends Mesh {
 		const requiredVertexLength = Math.max( ...validRanges.map( range => range.vertexStart + range.reservedVertexCount ) );
 		if ( requiredVertexLength > maxVertexCount ) {
 
-			throw new Error( `THREE.BatchedMesh: Geometry vertex values are being used outside the range ${ maxIndexCount }. Cannot shrink further.` );
+			throw new Error( `THREE.BatchedMesh: Geometry vertex values are being used outside the range ${ maxVertexCount }. Cannot shrink further.` );
 
 		}
 
@@ -27701,6 +27790,8 @@ class BatchedMesh extends Mesh {
 			copyArrayContents( oldGeometry.attributes[ key ].array, geometry.attributes[ key ].array );
 
 		}
+
+		this._visibilityChanged = true;
 
 	}
 
@@ -29696,8 +29787,8 @@ class DepthTexture extends Texture {
 	 * @param {number} [mapping=Texture.DEFAULT_MAPPING] - The texture mapping.
 	 * @param {number} [wrapS=ClampToEdgeWrapping] - The wrapS value.
 	 * @param {number} [wrapT=ClampToEdgeWrapping] - The wrapT value.
-	 * @param {number} [magFilter=LinearFilter] - The mag filter value.
-	 * @param {number} [minFilter=LinearFilter] - The min filter value.
+	 * @param {number} [magFilter=NearestFilter] - The mag filter value.
+	 * @param {number} [minFilter=NearestFilter] - The min filter value.
 	 * @param {number} [anisotropy=Texture.DEFAULT_ANISOTROPY] - The anisotropy value.
 	 * @param {number} [format=DepthFormat] - The texture format.
 	 * @param {number} [depth=1] - The depth of the texture.
@@ -39362,20 +39453,29 @@ class MeshPhysicalMaterial extends MeshStandardMaterial {
 		this.iridescenceIOR = 1.3;
 
 		/**
-		 *Array of exactly 2 elements, specifying minimum and maximum thickness of the iridescence layer.
-		 Thickness of iridescence layer has an equivalent effect of the one `thickness` has on `ior`.
+		 * The minimum thickness of the iridescence layer in nanometers.
 		 *
-		 * @type {Array<number,number>}
-		 * @default [100,400]
+		 * @type {number}
+		 * @default 100
 		 */
-		this.iridescenceThicknessRange = [ 100, 400 ];
+		this.iridescenceThicknessMinimum = 100;
+
+		/**
+		 * The maximum thickness of the iridescence layer in nanometers. If no
+		 * `iridescenceThicknessMap` is defined, this value is used as the thickness.
+		 *
+		 * @type {number}
+		 * @default 400
+		 */
+		this.iridescenceThicknessMaximum = 400;
 
 		/**
 		 * A texture that defines the thickness of the iridescence layer, stored in the green channel.
-		 * Minimum and maximum values of thickness are defined by `iridescenceThicknessRange` array:
-		 * - `0.0` in the green channel will result in thickness equal to first element of the array.
-		 * - `1.0` in the green channel will result in thickness equal to second element of the array.
-		 * - Values in-between will linearly interpolate between the elements of the array.
+		 * Minimum and maximum values of thickness are defined by `iridescenceThicknessMinimum` and
+		 * `iridescenceThicknessMaximum`:
+		 * - `0.0` in the green channel will result in thickness equal to `iridescenceThicknessMinimum`.
+		 * - `1.0` in the green channel will result in thickness equal to `iridescenceThicknessMaximum`.
+		 * - Values in-between will linearly interpolate between both values.
 		 *
 		 * `iridescenceThicknessMap` represents non-color data. Any texture assigned must have
 		 * `texture.colorSpace = NoColorSpace` (default).
@@ -39742,6 +39842,30 @@ class MeshPhysicalMaterial extends MeshStandardMaterial {
 
 	}
 
+	/**
+	 * Array of exactly 2 elements, specifying minimum and maximum thickness of the iridescence layer.
+	 *
+	 * @deprecated since r187. Use {@link MeshPhysicalMaterial#iridescenceThicknessMinimum} and {@link MeshPhysicalMaterial#iridescenceThicknessMaximum} instead.
+	 * @type {Array<number,number>}
+	 * @default [100,400]
+	 */
+	get iridescenceThicknessRange() {
+
+		warnOnce( 'MeshPhysicalMaterial: The "iridescenceThicknessRange" property has been replaced by "iridescenceThicknessMinimum" and "iridescenceThicknessMaximum".' ); // @deprecated r187
+
+		return [ this.iridescenceThicknessMinimum, this.iridescenceThicknessMaximum ];
+
+	}
+
+	set iridescenceThicknessRange( value ) {
+
+		warnOnce( 'MeshPhysicalMaterial: The "iridescenceThicknessRange" property has been replaced by "iridescenceThicknessMinimum" and "iridescenceThicknessMaximum".' ); // @deprecated r187
+
+		this.iridescenceThicknessMinimum = value[ 0 ];
+		this.iridescenceThicknessMaximum = value[ 1 ];
+
+	}
+
 	copy( source ) {
 
 		super.copy( source );
@@ -39772,7 +39896,8 @@ class MeshPhysicalMaterial extends MeshStandardMaterial {
 		this.iridescence = source.iridescence;
 		this.iridescenceMap = source.iridescenceMap;
 		this.iridescenceIOR = source.iridescenceIOR;
-		this.iridescenceThicknessRange = [ ...source.iridescenceThicknessRange ];
+		this.iridescenceThicknessMinimum = source.iridescenceThicknessMinimum;
+		this.iridescenceThicknessMaximum = source.iridescenceThicknessMaximum;
 		this.iridescenceThicknessMap = source.iridescenceThicknessMap;
 
 		this.retroreflectivity = source.retroreflectivity;
@@ -43306,6 +43431,13 @@ class KeyframeTrack {
 
 			}
 
+			if ( hasTangents( this.settings ) ) {
+
+				shiftTangentTimes( this.settings.inTangents, timeOffset );
+				shiftTangentTimes( this.settings.outTangents, timeOffset );
+
+			}
+
 		}
 
 		return this;
@@ -43622,6 +43754,18 @@ class KeyframeTrack {
 		}
 
 		return track;
+
+	}
+
+}
+
+function shiftTangentTimes( tangents, timeOffset ) {
+
+	// tangents are [ time, value ] pairs, so only every second entry is a time
+
+	for ( let i = 0, n = tangents.length; i !== n; i += 2 ) {
+
+		tangents[ i ] += timeOffset;
 
 	}
 
@@ -50613,7 +50757,7 @@ class ImageBitmapLoader extends Loader {
 		}
 
 		const fetchOptions = {};
-		fetchOptions.credentials = ( this.crossOrigin === 'anonymous' ) ? 'same-origin' : 'include';
+		fetchOptions.credentials = ( this.withCredentials || this.crossOrigin !== 'anonymous' ) ? 'include' : 'same-origin';
 		fetchOptions.headers = this.requestHeader;
 		fetchOptions.signal = ( typeof AbortSignal.any === 'function' ) ? AbortSignal.any( [ this._abortController.signal, this.manager.abortController.signal ] ) : this._abortController.signal;
 
@@ -58827,7 +58971,7 @@ class PolarGridHelper extends LineSegments {
 	 *
 	 * @param {number} [radius=10] - The radius of the polar grid. This can be any positive number.
 	 * @param {number} [sectors=16] - The number of sectors the grid will be divided into. This can be any positive integer.
-	 * @param {number} [rings=16] - The number of rings. This can be any positive integer.
+	 * @param {number} [rings=8] - The number of rings. This can be any positive integer.
 	 * @param {number} [divisions=64] - The number of line segments used for each circle. This can be any positive integer.
 	 * @param {number|Color|string} [color1=0x444444] - The first color used for grid elements.
 	 * @param {number|Color|string} [color2=0x888888] -  The second color used for grid elements.

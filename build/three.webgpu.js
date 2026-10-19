@@ -5,7 +5,7 @@
  */
 import { Material, LineBasicMaterial, LineDashedMaterial, NoBlending, warnOnce, MeshNormalMaterial, SRGBColorSpace, CubeTexture, EquirectangularReflectionMapping, EquirectangularRefractionMapping, CubeReflectionMapping, CubeRefractionMapping, warn, AddOperation, MixOperation, MultiplyOperation, MeshBasicMaterial, MeshLambertMaterial, MeshPhongMaterial, BackSide, MeshStandardMaterial, MeshPhysicalMaterial, MeshToonMaterial, MeshMatcapMaterial, SpriteMaterial, PointsMaterial, Vector2, ShadowMaterial, DynamicDrawUsage, Uint32BufferAttribute, Uint16BufferAttribute, error, ByteType, UnsignedByteType, ShortType, UnsignedShortType, HalfFloatType, IntType, UnsignedIntType, FloatType, AlphaFormat, RedFormat, RedIntegerFormat, DepthFormat, DepthStencilFormat, RGFormat, RGIntegerFormat, RGBFormat, RGBIntegerFormat, UnsignedShort4444Type, UnsignedShort5551Type, UnsignedInt248Type, UnsignedInt5999Type, UnsignedInt101111Type, DoubleSide, Vector4, DepthTexture, ColorManagement, SRGBTransfer, Vector3, Mesh, SphereGeometry, Color, Matrix2, Matrix3, Matrix4, NormalBlending, RenderTarget, LinearFilter, LinearMipmapNearestFilter, NearestMipmapLinearFilter, LinearMipmapLinearFilter, Float16BufferAttribute, yieldToMain, REVISION, Plane, EventDispatcher, PerspectiveCamera, ArrayCamera, PlaneGeometry, RGBAFormat, FrontSide, CustomBlending, AddEquation, ZeroFactor, CylinderGeometry, Quaternion, WebXRController, RAD2DEG, FramebufferTexture, NoToneMapping, PCFShadowMap, PCFSoftShadowMap, Scene, FrustumArray, Frustum, RenderObjectRefreshType, VSMShadowMap, NoColorSpace, DataTexture, RGBAIntegerFormat, TimestampQuery, createCanvasElement, MaxEquation, MinEquation, ReverseSubtractEquation, SubtractEquation, OneMinusConstantAlphaFactor, ConstantAlphaFactor, OneMinusConstantColorFactor, ConstantColorFactor, OneMinusDstAlphaFactor, OneMinusDstColorFactor, OneMinusSrcAlphaFactor, OneMinusSrcColorFactor, DstAlphaFactor, DstColorFactor, SrcAlphaSaturateFactor, SrcAlphaFactor, SrcColorFactor, OneFactor, CullFaceNone, CullFaceBack, CullFaceFront, MaterialBlending, MultiplyBlending, SubtractiveBlending, AdditiveBlending, NotEqualDepth, GreaterDepth, GreaterEqualDepth, EqualDepth, LessEqualDepth, LessDepth, AlwaysDepth, NeverDepth, ReversedDepthFuncs, RGB_S3TC_DXT1_Format, RGBA_S3TC_DXT1_Format, RGBA_S3TC_DXT3_Format, RGBA_S3TC_DXT5_Format, RGB_PVRTC_4BPPV1_Format, RGB_PVRTC_2BPPV1_Format, RGBA_PVRTC_4BPPV1_Format, RGBA_PVRTC_2BPPV1_Format, RGB_ETC1_Format, RGB_ETC2_Format, RGBA_ETC2_EAC_Format, R11_EAC_Format, SIGNED_R11_EAC_Format, RG11_EAC_Format, SIGNED_RG11_EAC_Format, RGBA_ASTC_4x4_Format, RGBA_ASTC_5x4_Format, RGBA_ASTC_5x5_Format, RGBA_ASTC_6x5_Format, RGBA_ASTC_6x6_Format, RGBA_ASTC_8x5_Format, RGBA_ASTC_8x6_Format, RGBA_ASTC_8x8_Format, RGBA_ASTC_10x5_Format, RGBA_ASTC_10x6_Format, RGBA_ASTC_10x8_Format, RGBA_ASTC_10x10_Format, RGBA_ASTC_12x10_Format, RGBA_ASTC_12x12_Format, RGBA_BPTC_Format, RGB_BPTC_SIGNED_Format, RGB_BPTC_UNSIGNED_Format, RED_RGTC1_Format, SIGNED_RED_RGTC1_Format, RED_GREEN_RGTC2_Format, SIGNED_RED_GREEN_RGTC2_Format, MirroredRepeatWrapping, ClampToEdgeWrapping, RepeatWrapping, NearestMipmapNearestFilter, NearestFilter, NotEqualCompare, GreaterCompare, GreaterEqualCompare, EqualCompare, LessEqualCompare, LessCompare, AlwaysCompare, NeverCompare, LinearTransfer, getByteLength, WebGLCoordinateSystem, Compatibility, isTypedArray, Texture, NotEqualStencilFunc, GreaterStencilFunc, GreaterEqualStencilFunc, EqualStencilFunc, LessEqualStencilFunc, LessStencilFunc, AlwaysStencilFunc, NeverStencilFunc, DecrementWrapStencilOp, IncrementWrapStencilOp, DecrementStencilOp, IncrementStencilOp, InvertStencilOp, ReplaceStencilOp, ZeroStencilOp, KeepStencilOp, WebGPUCoordinateSystem, SpotLight, PointLight, DirectionalLight, RectAreaLight, AmbientLight, HemisphereLight, LightProbe, LinearToneMapping, ReinhardToneMapping, CineonToneMapping, ACESFilmicToneMapping, AgXToneMapping, NeutralToneMapping, Group, Loader, FileLoader, MaterialLoader, ObjectLoader } from './three.core.js';
 export { AdditiveAnimationBlendMode, AnimationAction, AnimationClip, AnimationLoader, AnimationMixer, AnimationObjectGroup, AnimationUtils, ArcCurve, ArrowHelper, AttachedBindMode, Audio, AudioAnalyser, AudioContext, AudioListener, AudioLoader, AxesHelper, BasicDepthPacking, BasicShadowMap, BatchedMesh, BezierInterpolant, Bone, BooleanKeyframeTrack, Box2, Box3, Box3Helper, BoxGeometry, BoxHelper, BufferAttribute, BufferGeometry, BufferGeometryLoader, Cache, Camera, CameraHelper, CanvasTexture, CapsuleGeometry, CatmullRomCurve3, CircleGeometry, Clock, ColorKeyframeTrack, CompressedArrayTexture, CompressedCubeTexture, CompressedTexture, CompressedTextureLoader, ConeGeometry, Controls, CubeCamera, CubeDepthTexture, CubeTextureLoader, CubicBezierCurve, CubicBezierCurve3, CubicInterpolant, CullFaceFrontBack, Curve, CurvePath, CustomToneMapping, Cylindrical, Data3DTexture, DataArrayTexture, DataTextureLoader, DataUtils, DefaultLoadingManager, DetachedBindMode, DirectionalLightHelper, DiscreteInterpolant, DodecahedronGeometry, DynamicCopyUsage, DynamicReadUsage, EdgesGeometry, EllipseCurve, Euler, ExternalTexture, ExtrudeGeometry, Float32BufferAttribute, Fog, FogExp2, GLBufferAttribute, GLSL1, GLSL3, GridHelper, HTMLTexture, HemisphereLightHelper, IcosahedronGeometry, ImageBitmapLoader, ImageLoader, ImageUtils, InstancedBufferAttribute, InstancedBufferGeometry, InstancedInterleavedBuffer, InstancedMesh, Int16BufferAttribute, Int32BufferAttribute, Int8BufferAttribute, InterleavedBuffer, InterleavedBufferAttribute, Interpolant, InterpolateBezier, InterpolateDiscrete, InterpolateLinear, InterpolateSmooth, InterpolationSamplingMode, InterpolationSamplingType, KeyframeTrack, LOD, LatheGeometry, Layers, Light, LightShadow, Line, Line3, LineCurve, LineCurve3, LineLoop, LineSegments, LinearInterpolant, LinearMipMapLinearFilter, LinearMipMapNearestFilter, LinearSRGBColorSpace, LoaderUtils, LoadingManager, LoopOnce, LoopPingPong, LoopRepeat, MOUSE, MathUtils, MeshDepthMaterial, MeshDistanceMaterial, NearestMipMapLinearFilter, NearestMipMapNearestFilter, NoNormalPacking, NormalAnimationBlendMode, NormalGAPacking, NormalRGPacking, NumberKeyframeTrack, Object3D, ObjectSpaceNormalMap, OctahedronGeometry, OrthographicCamera, Path, PlaneHelper, PointLightHelper, Points, PolarGridHelper, PolyhedronGeometry, PositionalAudio, PropertyBinding, PropertyMixer, QuadraticBezierCurve, QuadraticBezierCurve3, QuaternionKeyframeTrack, QuaternionLinearInterpolant, RGBADepthPacking, RGBDepthPacking, RGDepthPacking, RawShaderMaterial, Ray, Raycaster, RenderTarget3D, RingGeometry, ShaderMaterial, Shape, ShapeGeometry, ShapePath, ShapeUtils, Skeleton, SkeletonHelper, SkinnedMesh, Source, Sphere, Spherical, SphericalHarmonics3, SplineCurve, SpotLightHelper, Sprite, StaticCopyUsage, StaticDrawUsage, StaticReadUsage, StereoCamera, StreamCopyUsage, StreamDrawUsage, StreamReadUsage, StringKeyframeTrack, TOUCH, TangentSpaceNormalMap, TetrahedronGeometry, TextureLoader, TextureSource, TextureUtils, Timer, TorusGeometry, TorusKnotGeometry, Triangle, TriangleFanDrawMode, TriangleStripDrawMode, TrianglesDrawMode, TubeGeometry, UVMapping, Uint8BufferAttribute, Uint8ClampedBufferAttribute, Uniform, UniformsGroup, VectorKeyframeTrack, VideoFrameTexture, VideoTexture, WebGL3DRenderTarget, WebGLArrayRenderTarget, WebGLRenderTarget, WireframeGeometry, WrapAroundEnding, ZeroCurvatureEnding, ZeroSlopeEnding, getConsoleFunction, log, setConsoleFunction } from './three.core.js';
-import { NodeMaterial, float, materialLineDashOffset, materialLineScale, materialLineDashSize, materialLineGapSize, dashSize, gapSize, varying, attribute, varyingProperty, Fn, cameraProjectionMatrix, vec2, vec4, modelViewMatrix, viewport, If, positionGeometry, mix, vec3, materialLineWidth, screenDPR, uv, smoothstep, diffuseColor, viewportOpaqueMipTexture, modelWorldMatrixInverse, cameraWorldMatrix, cameraProjectionMatrixInverse, positionLocal, positionPrevious, materialOpacity, colorSpaceToWorking, packNormalToRGB, normalView, Node, cubeTexture, NodeUpdateType, CubeRenderTarget, nodeProxy, LightingNode, materialEnvRotation, materialSpecularStrength, materialReflectivity, negateOnBackSide, normalViewGeometry, materialLightMap, BRDF_Lambert, positionViewDirection, F_Schlick, specularColor, shininess, materialShininess, materialSpecular, iridescenceThickness, iridescenceIOR, metalness, Schlick_to_F0, cameraPosition, positionWorld, normalWorld, roughness, diffuseContribution, specularColorBlended, specularF90, modelWorldMatrix, cameraViewMatrix, ior, thickness, attenuationColor, attenuationDistance, dispersion, transmission, DFGLUT, EON_DirectionalAlbedo, diffuseRoughness, iridescence, BRDF_Sheen, sheenRoughness, sheen, clearcoatNormalView, BRDF_GGX, clearcoatRoughness, retroreflectivity, BRDF_EON, positionView, LTC_Uv, mat3, LTC_Evaluate, EnvironmentBRDF, clearcoat, Loop, length, refract, normalize, div, cameraViewport, screenSize, log2, textureBicubicLevel, log, exp, viewportMipTexture, clamp, pmremTexture, isolate, materialEnvIntensity, pow4, bentNormalView, materialMetalness, materialRoughness, getRoughness, materialIOR, materialSpecularColor, materialSpecularIntensity, min, pow2, materialDiffuseRoughness, materialClearcoat, materialClearcoatRoughness, materialSheen, materialSheenRoughness, materialRetroreflectivity, materialIridescence, materialIridescenceIOR, materialIridescenceThickness, materialAnisotropy, anisotropy, alphaT, anisotropyT, TBNViewMatrix, anisotropyB, materialTransmission, materialThickness, materialAttenuationDistance, materialAttenuationColor, materialDispersion, materialClearcoatNormal, subBuild, materialReference, matcapUV, reference$1 as reference, materialRotation, rotate, materialPointSize, viewportSize, uniform, renderGroup, property, modelRadius, linearDepth, viewZToPerspectiveDepth, cameraFar, cameraNear, LTC_Evaluate_Volume, hashString, hashArray, ChainMap, Color4, backgroundIntensity, backgroundBlurriness, backgroundRotation, normalWorldGeometry, stack, getTextureType, shaderStages, getTypeFromLength, setCurrentStack, FunctionNode, ParameterNode, defaultBuildStages, getCurrentStack, AnalyticLightNode, lightTargetDirection, lightPosition, lightProjectionUV, getDistanceAttenuation, texture, textureSize, remap, atan, uniformArray, getShIrradianceAt, lightShadowMatrix, sub, acos, saturate, max, lightViewPosition, StackTrace, screenUV, reference as reference$1, fog, densityFogFactor, rangeFogFactor, builtin, LightsNode, context, renderOutput, InspectorBase, highpModelViewMatrix, highpModelNormalViewMatrix, QuadMesh, CodeNode, TextureNode, vectorComponents, NodeAccess, VarNode, ExpressionNode, PointLightNode, linearToneMapping, reinhardToneMapping, cineonToneMapping, acesFilmicToneMapping, agxToneMapping, neutralToneMapping, output, StorageBufferAttribute } from './three.tsl.js';
+import { NodeMaterial, float, materialLineDashOffset, materialLineScale, materialLineDashSize, materialLineGapSize, dashSize, gapSize, varying, attribute, varyingProperty, Fn, cameraProjectionMatrix, vec2, vec4, modelViewMatrix, viewport, If, positionGeometry, mix, vec3, materialLineWidth, screenDPR, uv, smoothstep, diffuseColor, viewportOpaqueMipTexture, modelWorldMatrixInverse, cameraWorldMatrix, cameraProjectionMatrixInverse, positionLocal, positionPrevious, materialOpacity, colorSpaceToWorking, packNormalToRGB, normalView, Node, cubeTexture, NodeUpdateType, CubeRenderTarget, nodeProxy, LightingNode, materialEnvRotation, materialSpecularStrength, materialReflectivity, negateOnBackSide, normalViewGeometry, materialLightMap, BRDF_Lambert, positionViewDirection, F_Schlick, specularColor, shininess, materialShininess, materialSpecular, iridescenceThickness, iridescenceIOR, metalness, Schlick_to_F0, cameraPosition, positionWorld, normalWorld, roughness, diffuseContribution, specularColorBlended, specularF90, modelWorldMatrix, cameraViewMatrix, ior, thickness, attenuationColor, attenuationDistance, dispersion, transmission, DFGLUT, EON_DirectionalAlbedo, diffuseRoughness, iridescence, BRDF_Sheen, sheenRoughness, sheen, clearcoatNormalView, BRDF_GGX, clearcoatRoughness, retroreflectivity, BRDF_EON, positionView, LTC_Uv, mat3, LTC_Evaluate, EnvironmentBRDF, clearcoat, Loop, length, refract, normalize, div, cameraViewport, screenSize, log2, textureBicubicLevel, log, exp, viewportMipTexture, clamp, pmremTexture, isolate, materialEnvIntensity, pow4, bentNormalView, materialMetalness, materialRoughness, getRoughness, materialIOR, materialSpecularColor, materialSpecularIntensity, min, pow2, materialDiffuseRoughness, materialClearcoat, materialClearcoatRoughness, materialSheen, materialSheenRoughness, materialRetroreflectivity, materialIridescence, materialIridescenceIOR, materialIridescenceThickness, materialAnisotropy, anisotropy, alphaT, anisotropyT, TBNViewMatrix, anisotropyB, materialTransmission, materialThickness, materialAttenuationDistance, materialAttenuationColor, materialDispersion, materialClearcoatNormal, subBuild, materialReference, matcapUV, reference$1 as reference, materialRotation, rotate, materialPointSize, viewportSize, uniform, renderGroup, property, modelRadius, linearDepth, viewZToPerspectiveDepth, cameraFar, cameraNear, LTC_Evaluate_Volume, hashString, hashArray, ChainMap, Color4, backgroundIntensity, backgroundBlurriness, backgroundRotation, normalWorldGeometry, stack, getTextureType, shaderStages, getTypeFromLength, setCurrentStack, FunctionNode, ParameterNode, isArrayAsParameter, defaultBuildStages, getCurrentStack, AnalyticLightNode, lightTargetDirection, lightPosition, lightProjectionUV, getDistanceAttenuation, texture, textureSize, remap, atan, uniformArray, getShIrradianceAt, lightShadowMatrix, sub, acos, saturate, max, lightViewPosition, StackTrace, screenUV, reference as reference$1, fog, densityFogFactor, rangeFogFactor, builtin, LightsNode, context, renderOutput, InspectorBase, highpModelViewMatrix, highpModelNormalViewMatrix, QuadMesh, CodeNode, TextureNode, vectorComponents, NodeAccess, VarNode, ExpressionNode, PointLightNode, linearToneMapping, reinhardToneMapping, cineonToneMapping, acesFilmicToneMapping, agxToneMapping, neutralToneMapping, output, StorageBufferAttribute } from './three.tsl.js';
 export { AONode, ArrayElementNode, ArrayNode, AssignNode, AtomicFunctionNode, AttributeNode, BarrierNode, BitcastNode, BitcountNode, BlendMode, BufferAttributeNode, BufferNode, BuiltinNode, BumpMapNode, BypassNode, ClippingNode, ColorSpaceNode, ComputeBuiltinNode, ComputeNode, ConditionalNode, ConstNode, ContextNode, ConvertNode, CubeTextureNode, DebugNode, EventNode, FlipNode, FrontFacingNode, FunctionCallNode, FunctionOverloadingNode, IndexNode, InputNode, InspectorNode, IrradianceNode, IsolateNode, JoinNode, LightingContextNode, LoopNode, MRTNode, MaterialNode, MaterialReferenceNode, MathNode, MaxMipLevelNode, MemberNode, ModelNode, NodeError, NodeMaterialObserver, NodeShaderStage, NodeType, NodeUtils, NormalMapNode, Object3DNode, OperatorNode, OutputStructNode, OverrideContextNode, PMREMGenerator, PMREMNode, PackFloatNode, Packed4x8IntegerNode, PassNode, PointShadowNode, PointUVNode, PropertyNode, RTTNode, RangeNode, ReferenceBaseNode, ReferenceElementNode, ReferenceNode, ReflectorNode, RenderOutputNode, RendererReferenceNode, RendererUtils, RotateNode, SampleNode, ScreenNode, SetNode, ShadowBaseNode, ShadowNode, SplitNode, StackNode, StorageArrayElementNode, StorageBufferNode, StorageInstancedBufferAttribute, StorageTexture3DNode, StorageTextureNode, StructNode, StructTypeNode, SubBuildNode, SubgroupFunctionNode, Three_TSL as TSL, Texture3DNode, TextureSizeNode, ToneMappingNode, ToonOutlinePassNode, UniformArrayNode, UniformGroupNode, UniformNode, UnpackFloatNode, UserDataNode, VaryingNode, VelocityNode, VertexColorNode, ViewportDepthNode, ViewportDepthTextureNode, ViewportSharedTextureNode, ViewportTextureNode, WorkgroupInfoNode, defaultShaderStages } from './three.tsl.js';
 
 /**
@@ -1789,6 +1789,19 @@ class MeshLambertNodeMaterial extends NodeMaterial {
 		 */
 		this.lights = true;
 
+		/**
+		 * The emissive color of lambert materials is by default inferred from the `emissive`,
+		 * `emissiveIntensity` and `emissiveMap` properties. This node property allows to
+		 * overwrite the default and define the emissive color with a node instead.
+		 *
+		 * If you don't want to overwrite the emissive color but modify the existing
+		 * value instead, use {@link materialEmissive}.
+		 *
+		 * @type {?Node<vec3>}
+		 * @default null
+		 */
+		this.emissiveNode = null;
+
 		this.setDefaultValues( _defaultValues$8 );
 
 		this.setValues( parameters );
@@ -1863,6 +1876,19 @@ class MeshPhongNodeMaterial extends NodeMaterial {
 		 * @default true
 		 */
 		this.lights = true;
+
+		/**
+		 * The emissive color of phong materials is by default inferred from the `emissive`,
+		 * `emissiveIntensity` and `emissiveMap` properties. This node property allows to
+		 * overwrite the default and define the emissive color with a node instead.
+		 *
+		 * If you don't want to overwrite the emissive color but modify the existing
+		 * value instead, use {@link materialEmissive}.
+		 *
+		 * @type {?Node<vec3>}
+		 * @default null
+		 */
+		this.emissiveNode = null;
 
 		/**
 		 * The shininess of phong materials is by default inferred from the `shininess`
@@ -2923,6 +2949,16 @@ class EnvironmentNode extends LightingNode {
 		 */
 		this.envNode = envNode;
 
+		/**
+		 * The PMREM node of a texture or material reference environment. Its texture is
+		 * resolved before rendering since materials with different environments can share a shader.
+		 *
+		 * @private
+		 * @type {?PMREMNode}
+		 * @default null
+		 */
+		this._pmremNode = null;
+
 	}
 
 	setup( builder ) {
@@ -2933,21 +2969,22 @@ class EnvironmentNode extends LightingNode {
 
 		if ( envNode.isTextureNode || envNode.isMaterialReferenceNode ) {
 
-			const value = ( envNode.isTextureNode ) ? envNode.value : material[ envNode.property ];
-
 			const cache = this._getPMREMNodeCache( builder.renderer );
 
-			let cacheEnvNode = cache.get( value );
+			let pmremNode = cache.get( envNode );
 
-			if ( cacheEnvNode === undefined ) {
+			if ( pmremNode === undefined ) {
 
-				cacheEnvNode = pmremTexture( value );
+				pmremNode = pmremTexture( this._getEnvTexture( builder ) );
 
-				cache.set( value, cacheEnvNode );
+				cache.set( envNode, pmremNode );
 
 			}
 
-			envNode	= cacheEnvNode;
+			this._pmremNode = pmremNode;
+			this.updateBeforeType = envNode.isMaterialReferenceNode ? NodeUpdateType.OBJECT : NodeUpdateType.RENDER;
+
+			envNode = pmremNode;
 
 		}
 
@@ -2988,6 +3025,44 @@ class EnvironmentNode extends LightingNode {
 			clearcoatRadiance.addAssign( isolateClearcoatRadiance );
 
 		}
+
+	}
+
+	updateBefore( frame ) {
+
+		const texture = this._getEnvTexture( frame );
+
+		// the texture can be removed without a rebuild of the material
+
+		if ( texture && this._pmremNode.value !== texture ) {
+
+			this._pmremNode.value = texture;
+			this._pmremNode.updateBefore( frame );
+
+		}
+
+	}
+
+	/**
+	 * Returns the current texture of the environment node.
+	 *
+	 * @private
+	 * @param {(NodeFrame|NodeBuilder)} state - The current state.
+	 * @return {Texture} The environment texture.
+	 */
+	_getEnvTexture( state ) {
+
+		const envNode = this.envNode;
+
+		if ( envNode.isMaterialReferenceNode ) {
+
+			envNode.updateReference( state );
+
+			return envNode.getValueFromReference();
+
+		}
+
+		return envNode.value;
 
 	}
 
@@ -3393,8 +3468,8 @@ class MeshPhysicalNodeMaterial extends MeshStandardNodeMaterial {
 		this.iridescenceIORNode = null;
 
 		/**
-		 * The iridescence thickness of physical materials is by default inferred from the `iridescenceThicknessRange`
-		 * and `iridescenceThicknessMap` properties. This node property allows to overwrite the default
+		 * The iridescence thickness of physical materials is by default inferred from the `iridescenceThicknessMinimum`,
+		 * `iridescenceThicknessMaximum` and `iridescenceThicknessMap` properties. This node property allows to overwrite the default
 		 * and define the iridescence thickness with a node instead.
 		 *
 		 * If you don't want to overwrite the iridescence thickness but modify the existing
@@ -4062,6 +4137,19 @@ class MeshToonNodeMaterial extends NodeMaterial {
 		 */
 		this.lights = true;
 
+		/**
+		 * The emissive color of toon materials is by default inferred from the `emissive`,
+		 * `emissiveIntensity` and `emissiveMap` properties. This node property allows to
+		 * overwrite the default and define the emissive color with a node instead.
+		 *
+		 * If you don't want to overwrite the emissive color but modify the existing
+		 * value instead, use {@link materialEmissive}.
+		 *
+		 * @type {?Node<vec3>}
+		 * @default null
+		 */
+		this.emissiveNode = null;
+
 		this.setDefaultValues( _defaultValues$4 );
 
 		this.setValues( parameters );
@@ -4196,7 +4284,7 @@ class SpriteNodeMaterial extends NodeMaterial {
 		 * particleMaterial.positionNode = positionBuffer.toAttribute();
 		 * ```
 		 *
-		 * @type {?Node<vec2>}
+		 * @type {?Node<vec3>}
 		 * @default null
 		 */
 		this.positionNode = null;
@@ -4271,7 +4359,7 @@ class SpriteNodeMaterial extends NodeMaterial {
 
 		if ( object.center && object.center.isVector2 === true ) {
 
-			const center = reference( 'center', 'vec2', object );
+			const center = reference( 'center', 'vec2' );
 
 			alignedPosition = alignedPosition.sub( center.sub( 0.5 ) );
 
@@ -5458,9 +5546,24 @@ class RenderObject {
 
 		};
 
+		/**
+		 * An event listener which is executed when `dispose()` is called on
+		 * the lights node of this render object, e.g. when the lighting system
+		 * of the renderer is disposed.
+		 *
+		 * @method
+		 */
+		this.onLightsNodeDispose = () => {
+
+			this.dispose();
+
+		};
+
 		this.object.addEventListener( 'dispose', this.onObjectDispose );
 		this.material.addEventListener( 'dispose', this.onMaterialDispose );
 		this.geometry.addEventListener( 'dispose', this.onGeometryDispose );
+
+		this.lightsNode.addEventListener( 'dispose', this.onLightsNodeDispose );
 
 		if ( this._sourceMaterial !== null ) {
 
@@ -5538,7 +5641,7 @@ class RenderObject {
 	 */
 	getBindings() {
 
-		return this._bindings || ( this._bindings = this.getNodeBuilderState().createBindings() );
+		return this._bindings || ( this._bindings = this.getNodeBuilderState().createBindings( this.renderer._bindings, this.context ) );
 
 	}
 
@@ -5962,7 +6065,7 @@ class RenderObject {
 
 		}
 
-		cacheKey += this.context.id + ',';
+		cacheKey += this.context.stateKey + ',';
 
 		cacheKey += object.receiveShadow + ',';
 
@@ -6076,6 +6179,8 @@ class RenderObject {
 		this.object.removeEventListener( 'dispose', this.onObjectDispose );
 		this.material.removeEventListener( 'dispose', this.onMaterialDispose );
 		this.geometry.removeEventListener( 'dispose', this.onGeometryDispose );
+
+		this.lightsNode.removeEventListener( 'dispose', this.onLightsNodeDispose );
 
 		if ( this._sourceMaterial !== null ) {
 
@@ -6437,6 +6542,8 @@ const AttributeType = {
 
 const GPU_CHUNK_BYTES = 16;
 
+let _generation = 0;
+
 /**
  * This renderer module manages geometry attributes.
  *
@@ -6470,11 +6577,11 @@ class Attributes extends DataMap {
 		this.info = info;
 
 		/**
-		 * Stores weak references to the storage attributes with attached
+		 * Stores weak references to the buffer attributes with attached
 		 * `dispose` event listeners.
 		 *
 		 * @private
-		 * @type {Set<WeakRef<StorageBufferAttribute|StorageInstancedBufferAttribute>>}
+		 * @type {Set<WeakRef<BufferAttribute>>}
 		 */
 		this._tracked = new Set();
 
@@ -6486,6 +6593,15 @@ class Attributes extends DataMap {
 		 * @type {FinalizationRegistry}
 		 */
 		this._registry = new FinalizationRegistry( ( ref ) => this._tracked.delete( ref ) );
+
+		/**
+		 * Incremented whenever the buffer of an attribute is destroyed. Render objects
+		 * only have to verify their attributes if this version has changed.
+		 *
+		 * @type {number}
+		 * @default 0
+		 */
+		this.disposeVersion = 0;
 
 	}
 
@@ -6501,7 +6617,9 @@ class Attributes extends DataMap {
 
 		if ( attributeData !== null ) {
 
-			if ( attribute.isStorageBufferAttribute === true || attribute.isStorageInstancedBufferAttribute === true ) {
+			this.disposeVersion ++;
+
+			if ( attribute.isBufferAttribute === true ) {
 
 				attribute.removeEventListener( 'dispose', attributeData.onDispose );
 
@@ -6556,10 +6674,11 @@ class Attributes extends DataMap {
 			}
 
 			data.version = attribute.version;
+			data.generation = _generation ++;
 
-			// only storage buffer attributes support disposal
+			// interleaved buffer attributes are not event dispatchers
 
-			if ( attribute.isStorageBufferAttribute === true || attribute.isStorageInstancedBufferAttribute === true ) {
+			if ( attribute.isBufferAttribute === true ) {
 
 				data.onDispose = () => {
 
@@ -7043,7 +7162,8 @@ class Geometries extends DataMap {
 
 			if ( geometry === undefined ) continue;
 
-			geometry.removeEventListener( 'dispose', this.get( geometry ).onDispose );
+			const geometryData = this.get( geometry );
+			geometryData.onDispose();
 
 		}
 
@@ -7669,8 +7789,10 @@ class ComputePipeline extends Pipeline {
 	 *
 	 * @param {string} cacheKey - The pipeline's cache key.
 	 * @param {ProgrammableStage} computeProgram - The pipeline's compute shader.
+	 * @param {?Array<Object>} [transforms=null] - The transforms (only relevant for WebGL 2 which uses Transform Feedback).
+	 * @param {?Array<Object>} [attributes=null] - The attributes (only relevant for WebGL 2 which uses Transform Feedback).
 	 */
-	constructor( cacheKey, computeProgram ) {
+	constructor( cacheKey, computeProgram, transforms = null, attributes = null ) {
 
 		super( cacheKey );
 
@@ -7680,6 +7802,20 @@ class ComputePipeline extends Pipeline {
 		 * @type {ProgrammableStage}
 		 */
 		this.computeProgram = computeProgram;
+
+		/**
+		 * The transforms (only relevant for WebGL 2 which uses Transform Feedback).
+		 *
+		 * @type {?Array<Object>}
+		 */
+		this.transforms = transforms;
+
+		/**
+		 * The attributes (only relevant for WebGL 2 which uses Transform Feedback).
+		 *
+		 * @type {?Array<Object>}
+		 */
+		this.attributes = attributes;
 
 		/**
 		 * This flag can be used for type testing.
@@ -7711,10 +7847,8 @@ class ProgrammableStage {
 	 * @param {string} code - The shader code.
 	 * @param {('vertex'|'fragment'|'compute')} stage - The type of stage.
 	 * @param {string} name - The name of the shader.
-	 * @param {?Array<Object>} [transforms=null] - The transforms (only relevant for compute stages with WebGL 2 which uses Transform Feedback).
-	 * @param {?Array<Object>} [attributes=null] - The attributes (only relevant for compute stages with WebGL 2 which uses Transform Feedback).
 	 */
-	constructor( code, stage, name, transforms = null, attributes = null ) {
+	constructor( code, stage, name ) {
 
 		/**
 		 * The id of the programmable stage.
@@ -7744,20 +7878,6 @@ class ProgrammableStage {
 		 * @type {string}
 		 */
 		this.name = name;
-
-		/**
-		 * The transforms (only relevant for compute stages with WebGL 2 which uses Transform Feedback).
-		 *
-		 * @type {?Array<Object>}
-		 */
-		this.transforms = transforms;
-
-		/**
-		 * The attributes (only relevant for compute stages with WebGL 2 which uses Transform Feedback).
-		 *
-		 * @type {?Array<Object>}
-		 */
-		this.attributes = attributes;
 
 		/**
 		 * How often the programmable stage is currently in use.
@@ -7879,7 +7999,7 @@ class Pipelines extends DataMap {
 
 			if ( stageCompute === undefined ) {
 
-				stageCompute = new ProgrammableStage( nodeBuilderState.computeShader, 'compute', computeNode.name, nodeBuilderState.transforms, nodeBuilderState.nodeAttributes );
+				stageCompute = new ProgrammableStage( nodeBuilderState.computeShader, 'compute', computeNode.name );
 				this.programs.compute.set( nodeBuilderState.computeShader, stageCompute );
 
 				backend.createProgram( stageCompute );
@@ -8133,7 +8253,9 @@ class Pipelines extends DataMap {
 
 		if ( pipeline === undefined ) {
 
-			pipeline = new ComputePipeline( cacheKey, stageCompute );
+			const { transforms, nodeAttributes } = this.nodes.getForCompute( computeNode );
+
+			pipeline = new ComputePipeline( cacheKey, stageCompute, transforms, nodeAttributes );
 
 			this.caches.set( cacheKey, pipeline );
 
@@ -8277,50 +8399,6 @@ class Pipelines extends DataMap {
 
 }
 
-let _id$8 = 0;
-
-/**
- * A bind group represents a collection of bindings and thus a collection
- * or resources. Bind groups are assigned to pipelines to provide them
- * with the required resources (like uniform buffers or textures).
- *
- * @private
- */
-class BindGroup {
-
-	/**
-	 * Constructs a new bind group.
-	 *
-	 * @param {string} name - The bind group's name.
-	 * @param {Array<Binding>} bindings - An array of bindings.
-	 */
-	constructor( name = '', bindings = [] ) {
-
-		/**
-		 * The bind group's name.
-		 *
-		 * @type {string}
-		 */
-		this.name = name;
-
-		/**
-		 * An array of bindings.
-		 *
-		 * @type {Array<Binding>}
-		 */
-		this.bindings = bindings;
-
-		/**
-		 * The group's ID.
-		 *
-		 * @type {number}
-		 */
-		this.id = _id$8 ++;
-
-	}
-
-}
-
 /**
  * This renderer module manages the bindings of the renderer.
  *
@@ -8456,20 +8534,26 @@ class Bindings extends DataMap {
 	}
 
 	/**
-	 * Returns the shared bind group for the given bindings and the current render context.
-	 * If it does not exist yet, it is created with the given name and bindings.
+	 * Returns the shared bind group of the given render context that corresponds to the given bind group.
 	 *
-	 * @param {string} name - The bind group's name.
-	 * @param {Array<Binding>} bindings - An array of bindings.
+	 * @param {BindGroup} bindGroup - The bind group.
+	 * @param {?RenderContext} [renderContext=null] - The render context. If not set, the current render context is used.
 	 * @return {BindGroup} The shared bind group.
 	 */
-	getSharedBindGroup( name, bindings ) {
+	getSharedBindGroup( bindGroup, renderContext = null ) {
+
+		if ( renderContext === null ) {
+
+			const renderer = this.backend.renderer;
+			renderContext = renderer._currentRenderContext || renderer; // use renderer as fallback until we have a compute context
+
+		}
 
 		// build cache key
 
 		let cacheKeyString = '';
 
-		for ( const binding of bindings ) {
+		for ( const binding of bindGroup.bindings ) {
 
 			if ( binding.isNodeUniformsGroup ) {
 
@@ -8493,9 +8577,6 @@ class Bindings extends DataMap {
 
 		// lookup bind group cache
 
-		const renderer = this.backend.renderer;
-		const renderContext = renderer._currentRenderContext || renderer; // use renderer as fallback until we have a compute context
-
 		let bindGroupsCache = this._sharedBindGroups.get( renderContext );
 
 		if ( bindGroupsCache === undefined ) {
@@ -8508,21 +8589,23 @@ class Bindings extends DataMap {
 
 		// lookup bind group
 
-		let bindGroup = bindGroupsCache.get( cacheKey );
+		let sharedBindGroup = bindGroupsCache.get( cacheKey );
 
-		if ( bindGroup === undefined ) {
+		if ( sharedBindGroup === undefined ) {
 
-			bindGroup = new BindGroup( name, bindings );
+			// make sure shared bindings are cloned per render context
 
-			bindGroupsCache.set( cacheKey, bindGroup );
+			sharedBindGroup = this.has( bindGroup ) ? bindGroup.clone() : bindGroup;
 
-			const groupData = this.get( bindGroup );
+			bindGroupsCache.set( cacheKey, sharedBindGroup );
+
+			const groupData = this.get( sharedBindGroup );
 			groupData.renderContext = renderContext;
 			groupData.cacheKey = cacheKey;
 
 		}
 
-		return bindGroup;
+		return sharedBindGroup;
 
 	}
 
@@ -8790,15 +8873,23 @@ class Bindings extends DataMap {
 
 				this.attributes.update( attribute, attributeType );
 
-				if ( bindingData.attribute !== attribute ) {
+				// generation: a new buffer is created if the attribute has been disposed while in use
+
+				const generation = this.attributes.get( attribute ).generation;
+
+				if ( bindingData.attribute !== attribute || bindingData.generation !== generation ) {
 
 					bindingData.attribute = attribute;
+					bindingData.generation = generation;
 
 					needsBindingsUpdate = true;
 
 				}
 
+				// the generation is part of the version so a re-created buffer replaces the cached bind group
+
 				cacheKey += attribute.id + ',';
+				version += generation;
 
 			}
 
@@ -9505,7 +9596,7 @@ class RenderLists {
 
 }
 
-let _id$7 = 0;
+let _id$8 = 0;
 
 /**
  * Any render or compute command is executed in a specific context that defines
@@ -9527,7 +9618,19 @@ class RenderContext {
 		 *
 		 * @type {number}
 		 */
-		this.id = _id$7 ++;
+		this.id = _id$8 ++;
+
+		/**
+		 * Identifies the attachment and MRT configuration of the context.
+		 * Unlike the ID, it is the same for the contexts of all renderer
+		 * call depths, so render objects use it in their cache key. That way,
+		 * the shaders built by `compileAsync()` are also used by nested render
+		 * calls like the scene pass of a render pipeline.
+		 *
+		 * @type {string}
+		 * @default ''
+		 */
+		this.stateKey = '';
 
 		/**
 		 * The MRT configuration.
@@ -9854,7 +9957,8 @@ class RenderContexts {
 
 		//
 
-		const renderStateKey = attachmentState + '-' + mrtState + '-' + callDepth;
+		const stateKey = attachmentState + '-' + mrtState;
+		const renderStateKey = stateKey + '-' + callDepth; // one render context per call depth keeps the bindings of nested renders separate
 
 		let renderState = this._renderContexts[ renderStateKey ];
 
@@ -9862,6 +9966,7 @@ class RenderContexts {
 
 			renderState = new RenderContext();
 			renderState.mrt = mrt;
+			renderState.stateKey = stateKey;
 
 			this._renderContexts[ renderStateKey ] = renderState;
 
@@ -10828,6 +10933,61 @@ class Background extends DataMap {
 
 }
 
+let _id$7 = 0;
+
+/**
+ * A bind group represents a collection of bindings and thus a collection
+ * or resources. Bind groups are assigned to pipelines to provide them
+ * with the required resources (like uniform buffers or textures).
+ *
+ * @private
+ */
+class BindGroup {
+
+	/**
+	 * Constructs a new bind group.
+	 *
+	 * @param {string} name - The bind group's name.
+	 * @param {Array<Binding>} bindings - An array of bindings.
+	 */
+	constructor( name = '', bindings = [] ) {
+
+		/**
+		 * The bind group's name.
+		 *
+		 * @type {string}
+		 */
+		this.name = name;
+
+		/**
+		 * An array of bindings.
+		 *
+		 * @type {Array<Binding>}
+		 */
+		this.bindings = bindings;
+
+		/**
+		 * The group's ID.
+		 *
+		 * @type {number}
+		 */
+		this.id = _id$7 ++;
+
+	}
+
+	/**
+	 * Returns a new bind group with the same name and clones of the bindings.
+	 *
+	 * @return {BindGroup} A clone of this bind group.
+	 */
+	clone() {
+
+		return new BindGroup( this.name, this.bindings.map( ( binding ) => binding.clone() ) );
+
+	}
+
+}
+
 /**
  * This module represents the state of a node builder after it was
  * used to build the nodes for a render object. The state holds the
@@ -10950,11 +11110,13 @@ class NodeBuilderState {
 	 * on the existing bind groups of this state. Shared groups are
 	 * not cloned.
 	 *
+	 * @param {Bindings} bindings - Renderer component for managing bindings.
+	 * @param {RenderContext} renderContext - The render context.
 	 * @return {Array<BindGroup>} A array of bind groups.
 	 */
-	createBindings() {
+	createBindings( bindings, renderContext ) {
 
-		const bindings = [];
+		const bindGroups = [];
 
 		for ( const instanceGroup of this.bindings ) {
 
@@ -10963,7 +11125,7 @@ class NodeBuilderState {
 			if ( shared !== true ) {
 
 				const bindingsGroup = new BindGroup( instanceGroup.name, [] );
-				bindings.push( bindingsGroup );
+				bindGroups.push( bindingsGroup );
 
 				for ( const instanceBinding of instanceGroup.bindings ) {
 
@@ -10973,13 +11135,13 @@ class NodeBuilderState {
 
 			} else {
 
-				bindings.push( instanceGroup );
+				bindGroups.push( bindings.getSharedBindGroup( instanceGroup, renderContext ) );
 
 			}
 
 		}
 
-		return bindings;
+		return bindGroups;
 
 	}
 
@@ -12160,6 +12322,35 @@ class Matrix4NodeUniform extends Matrix4Uniform {
 let _id$5 = 0;
 
 const _functionNodeCache = new WeakMap();
+const _layoutDefaultsCache = new WeakMap();
+
+// Inputs of a layout function call. They can be destructured as an array or as an object.
+const _createLayoutInputs = ( layout, values ) => {
+
+	const inputs = {
+		[ Symbol.iterator ]() {
+
+			let index = 0;
+			const values = Object.values( this );
+			return {
+				next: () => ( {
+					value: values[ index ],
+					done: index ++ >= values.length
+				} )
+			};
+
+		}
+	};
+
+	layout.inputs.forEach( ( input, i ) => {
+
+		inputs[ input.name ] = values[ i ];
+
+	} );
+
+	return inputs;
+
+};
 
 const typeFromArray = new Map( [
 	[ Int8Array, 'int' ],
@@ -12188,6 +12379,47 @@ const _toFloat = ( value ) => {
 };
 
 const _componentTypeRanks = { bool: 0, uint: 1, int: 2, float: 3 };
+
+/**
+ * Data of a node in a shader stage. All common properties are declared upfront,
+ * so the objects share a single shape.
+ *
+ * @private
+ */
+class NodeData {
+
+	constructor() {
+
+		this.properties = undefined;
+		this.type = undefined;
+		this.typeFromOutput = undefined;
+		this.buildStages = undefined;
+		this.usageCount = undefined;
+		this.readUsageCount = undefined;
+		this.writeUsageCount = undefined;
+		this.stack = undefined;
+		this.stages = undefined;
+		this.snippet = undefined;
+		this.propertyName = undefined;
+		this.generated = undefined;
+		this.flowBlock = undefined;
+		this.assign = undefined;
+		this.forceDeclaration = undefined;
+		this.variable = undefined;
+		this.cacheVariable = undefined;
+		this.uniform = undefined;
+		this.subBuilds = undefined;
+		this.subBuildsCache = undefined;
+
+	}
+
+}
+
+const _componentTypeCache = new Map();
+const _typeLengthCache = new Map();
+const _isVectorCache = new Map();
+const _isMatrixCache = new Map();
+const _isIntegerCache = new Map();
 
 const _checkWriteUsage = ( data ) => {
 
@@ -12765,15 +12997,11 @@ class NodeBuilder {
 
 		//
 
-		let bindGroup;
+		let bindGroup = new BindGroup( groupName, bindings );
 
 		if ( sharedGroup && this.renderer._bindings !== undefined ) {
 
-			bindGroup = this.renderer._bindings.getSharedBindGroup( groupName, bindings );
-
-		} else {
-
-			bindGroup = new BindGroup( groupName, bindings );
+			bindGroup = this.renderer._bindings.getSharedBindGroup( bindGroup );
 
 		}
 
@@ -13749,7 +13977,9 @@ class NodeBuilder {
 	 */
 	isVector( type ) {
 
-		return /vec\d/.test( type );
+		let result = _isVectorCache.get( type );
+		if ( result === undefined ) _isVectorCache.set( type, result = /vec\d/.test( type ) );
+		return result;
 
 	}
 
@@ -13761,7 +13991,9 @@ class NodeBuilder {
 	 */
 	isMatrix( type ) {
 
-		return /mat\d/.test( type );
+		let result = _isMatrixCache.get( type );
+		if ( result === undefined ) _isMatrixCache.set( type, result = /mat\d/.test( type ) );
+		return result;
 
 	}
 
@@ -13837,15 +14069,23 @@ class NodeBuilder {
 
 		if ( type === 'float' || type === 'bool' || type === 'int' || type === 'uint' ) return type;
 
-		const componentType = /(b|i|u|)(vec|mat)([2-4])/.exec( type );
+		let result = _componentTypeCache.get( type );
 
-		if ( componentType === null ) return null;
+		if ( result === undefined ) {
 
-		if ( componentType[ 1 ] === 'b' ) return 'bool';
-		if ( componentType[ 1 ] === 'i' ) return 'int';
-		if ( componentType[ 1 ] === 'u' ) return 'uint';
+			const componentType = /(b|i|u|)(vec|mat)([2-4])/.exec( type );
 
-		return 'float';
+			if ( componentType === null ) result = null;
+			else if ( componentType[ 1 ] === 'b' ) result = 'bool';
+			else if ( componentType[ 1 ] === 'i' ) result = 'int';
+			else if ( componentType[ 1 ] === 'u' ) result = 'uint';
+			else result = 'float';
+
+			_componentTypeCache.set( type, result );
+
+		}
+
+		return result;
 
 	}
 
@@ -13909,7 +14149,9 @@ class NodeBuilder {
 	 */
 	isInteger( type ) {
 
-		return /int|uint|(i|u)vec/.test( type );
+		let result = _isIntegerCache.get( type );
+		if ( result === undefined ) _isIntegerCache.set( type, result = /int|uint|(i|u)vec/.test( type ) );
+		return result;
 
 	}
 
@@ -13950,6 +14192,24 @@ class NodeBuilder {
 	getTypeLength( type ) {
 
 		const vecType = this.getVectorType( type );
+
+		let length = _typeLengthCache.get( vecType );
+
+		if ( length === undefined ) {
+
+			length = this._getTypeLength( vecType );
+
+			_typeLengthCache.set( vecType, length );
+
+		}
+
+		return length;
+
+	}
+
+	_getTypeLength( type ) {
+
+		const vecType = type;
 		const vecNum = /vec([2-4])/.exec( vecType );
 
 		if ( vecNum !== null ) return Number( vecNum[ 1 ] );
@@ -14168,7 +14428,7 @@ class NodeBuilder {
 
 		}
 
-		if ( nodeData[ shaderStage ] === undefined ) nodeData[ shaderStage ] = {};
+		if ( nodeData[ shaderStage ] === undefined ) nodeData[ shaderStage ] = new NodeData();
 
 		//
 
@@ -14183,7 +14443,7 @@ class NodeBuilder {
 
 			if ( data.subBuildsCache === undefined ) data.subBuildsCache = {};
 
-			data = data.subBuildsCache[ subBuild ] || ( data.subBuildsCache[ subBuild ] = {} );
+			data = data.subBuildsCache[ subBuild ] || ( data.subBuildsCache[ subBuild ] = new NodeData() );
 			data.subBuilds = subBuilds;
 
 		}
@@ -14418,7 +14678,7 @@ class NodeBuilder {
 	 */
 	isDeterministic( node ) {
 
-		if ( node.isVarNode && node.intent ) {
+		if ( node.isVarNode && node.assignable ) {
 
 			node = node.node;
 
@@ -14525,16 +14785,16 @@ class NodeBuilder {
 		const baseName = node.name;
 
 		let name = baseName;
-		let property = this.getPropertyName( node );
+		let declarationName = this.getDeclarationName( node );
 		let index = 1;
 
 		// Automatically renames the property if the name is already in use or reserved.
 
-		while ( ( checkKeywords && this.isReservedKeyword( name ) ) || declarations[ property ] !== undefined ) {
+		while ( ( checkKeywords && this.isReservedKeyword( name ) ) || declarations[ declarationName ] !== undefined ) {
 
 			name = baseName + '_' + index ++;
 			node.name = name;
-			property = this.getPropertyName( node );
+			declarationName = this.getDeclarationName( node );
 
 		}
 
@@ -14544,7 +14804,20 @@ class NodeBuilder {
 
 		}
 
-		declarations[ property ] = node;
+		declarations[ declarationName ] = node;
+
+	}
+
+	/**
+	 * Returns the identifier the given node declares in the shader. It is used
+	 * by {@link NodeBuilder#registerDeclaration} to detect name collisions.
+	 *
+	 * @param {Object} node - The node.
+	 * @return {string} The declaration name.
+	 */
+	getDeclarationName( node ) {
+
+		return this.getPropertyName( node );
 
 	}
 
@@ -14592,7 +14865,7 @@ class NodeBuilder {
 
 		code = this.tab + code;
 
-		if ( ! /;\s*$/.test( code ) ) {
+		if ( code.trimEnd().endsWith( ';' ) === false ) {
 
 			code = code + ';\n';
 
@@ -14684,7 +14957,7 @@ class NodeBuilder {
 	 */
 	addInclude( node ) {
 
-		if ( this.currentFunctionNode !== null ) {
+		if ( this.currentFunctionNode !== null && this.currentFunctionNode.includes.includes( node ) === false ) {
 
 			this.currentFunctionNode.includes.push( node );
 
@@ -14744,26 +15017,7 @@ class NodeBuilder {
 
 		const layout = shaderNode.layout;
 
-		const inputs = {
-			[ Symbol.iterator ]() {
-
-				let index = 0;
-				const values = Object.values( this );
-				return {
-					next: () => ( {
-						value: values[ index ],
-						done: index ++ >= values.length
-					} )
-				};
-
-			}
-		};
-
-		for ( const input of layout.inputs ) {
-
-			inputs[ input.name ] = new ParameterNode( input.type, input.name );
-
-		}
+		const inputs = _createLayoutInputs( layout, layout.inputs.map( input => new ParameterNode( input.type, input.name ) ) );
 
 		//
 
@@ -14775,6 +15029,217 @@ class NodeBuilder {
 		shaderNode.layout = layout;
 
 		return flowData;
+
+	}
+
+	/**
+	 * Returns the inputs of a call to a TSL function with layout. Missing inputs are completed
+	 * with the default values of the function parameters, found by running the function once
+	 * with all inputs and once without the missing ones, and comparing both node graphs.
+	 *
+	 * @private
+	 * @param {ShaderNodeInternal} shaderNode - The shader node of the function.
+	 * @param {?Array} rawInputs - The inputs of the call.
+	 * @return {?Array} The inputs of the call, or `null` if the defaults can't be resolved and the function must be expanded inline.
+	 */
+	_getLayoutInputs( shaderNode, rawInputs ) {
+
+		const inputs = shaderNode.layout.inputs;
+
+		const firstInput = rawInputs !== null && rawInputs.length > 0 ? rawInputs[ 0 ] : null;
+		const object = firstInput !== null && firstInput !== undefined && isArrayAsParameter( rawInputs ) === false ? firstInput : null;
+		const provided = inputs.map( ( input, i ) => object !== null ? object[ input.name ] !== undefined : rawInputs !== null && rawInputs[ i ] !== undefined );
+
+		if ( provided.every( Boolean ) ) return rawInputs !== null ? rawInputs : [];
+
+		if ( shaderNode.once ) return null;
+
+		// The defaults only depend on which inputs are missing, so they are shared by all builders.
+
+		let cache = _layoutDefaultsCache.get( shaderNode );
+
+		if ( cache === undefined ) {
+
+			cache = new Map();
+			_layoutDefaultsCache.set( shaderNode, cache );
+
+		}
+
+		const key = provided.map( Number ).join( '' );
+
+		let defaults = cache.get( key );
+
+		if ( defaults === undefined ) {
+
+			defaults = this._resolveLayoutDefaults( shaderNode, provided );
+			cache.set( key, defaults );
+
+		}
+
+		if ( defaults === null ) return null;
+
+		if ( object !== null ) {
+
+			const completed = { ...object };
+
+			inputs.forEach( ( input, i ) => {
+
+				if ( provided[ i ] === false ) completed[ input.name ] = defaults[ i ];
+
+			} );
+
+			return [ completed ];
+
+		}
+
+		return provided.map( ( isProvided, i ) => isProvided ? rawInputs[ i ] : defaults[ i ] );
+
+	}
+
+	/**
+	 * Resolves the default values of the missing inputs of a TSL function with layout.
+	 *
+	 * @private
+	 * @param {ShaderNodeInternal} shaderNode - The shader node of the function.
+	 * @param {Array<boolean>} provided - Whether each input of the layout was provided.
+	 * @return {?Array<Node>} The default value of each missing input, or `null` if they could not be resolved.
+	 */
+	_resolveLayoutDefaults( shaderNode, provided ) {
+
+		const layout = shaderNode.layout;
+		const parameters = layout.inputs.map( input => new ParameterNode( input.type, input.name ) );
+
+		const fullGraph = this._getLayoutCallGraph( shaderNode, _createLayoutInputs( layout, parameters ) );
+		const partialGraph = this._getLayoutCallGraph( shaderNode, _createLayoutInputs( layout, parameters.map( ( parameter, i ) => provided[ i ] ? parameter : undefined ) ) );
+
+		// Walk both graphs together: where the full graph uses the parameter of a missing input,
+		// the partial graph uses its default value.
+
+		const missing = new Map();
+		parameters.forEach( ( parameter, i ) => {
+
+			if ( provided[ i ] === false ) missing.set( parameter, i );
+
+		} );
+
+		const defaults = [];
+		const visited = new Map();
+
+		const walk = ( a, b ) => {
+
+			if ( a === b ) return true;
+			if ( ! a || ! b || a.isNode !== true || b.isNode !== true ) return false;
+
+			const index = missing.get( a );
+
+			if ( index !== undefined ) {
+
+				if ( defaults[ index ] === undefined ) defaults[ index ] = b;
+
+				return defaults[ index ] === b;
+
+			}
+
+			if ( visited.has( a ) ) return visited.get( a ) === b;
+			if ( a.constructor !== b.constructor ) return false;
+
+			visited.set( a, b );
+
+			const childrenA = [ ...a.getChildren() ];
+			const childrenB = [ ...b.getChildren() ];
+
+			if ( childrenA.length !== childrenB.length ) return false;
+
+			for ( let i = 0; i < childrenA.length; i ++ ) {
+
+				if ( walk( childrenA[ i ], childrenB[ i ] ) === false ) return false;
+
+			}
+
+			return true;
+
+		};
+
+		// The default values are evaluated when the parameters are destructured, before the body,
+		// so the nodes they add to the stack come first. Align the body statements from the end.
+
+		const extra = partialGraph.nodes.length - fullGraph.nodes.length;
+
+		if ( extra < 0 ) return null;
+
+		visited.set( fullGraph, partialGraph );
+
+		if ( walk( fullGraph.outputNode, partialGraph.outputNode ) === false ) return null;
+
+		for ( let i = 0; i < fullGraph.nodes.length; i ++ ) {
+
+			if ( walk( fullGraph.nodes[ i ], partialGraph.nodes[ extra + i ] ) === false ) return null;
+
+		}
+
+		// Every missing input must have a default that does not depend on other parameters.
+
+		const parameterSet = new Set( parameters );
+
+		for ( const index of missing.values() ) {
+
+			const value = defaults[ index ];
+
+			if ( value === undefined ) return null;
+
+			const stack = [ value ];
+			const seen = new Set();
+
+			while ( stack.length > 0 ) {
+
+				const node = stack.pop();
+
+				if ( parameterSet.has( node ) ) return null;
+				if ( seen.has( node ) ) continue;
+
+				seen.add( node );
+
+				for ( const child of node.getChildren() ) stack.push( child );
+
+			}
+
+		}
+
+		return defaults;
+
+	}
+
+	/**
+	 * Runs a TSL function with layout as an inline call and returns the resulting stack.
+	 *
+	 * @private
+	 * @param {ShaderNodeInternal} shaderNode - The shader node of the function.
+	 * @param {Object} inputs - The inputs of the call.
+	 * @return {StackNode} The stack with the nodes of the call.
+	 */
+	_getLayoutCallGraph( shaderNode, inputs ) {
+
+		const layout = shaderNode.layout;
+
+		let graph;
+
+		shaderNode.layout = null;
+
+		this.addStack();
+
+		try {
+
+			this.stack.outputNode = shaderNode.call( inputs ).call( this );
+
+		} finally {
+
+			graph = this.removeStack();
+
+			shaderNode.layout = layout;
+
+		}
+
+		return graph;
 
 	}
 
@@ -16532,7 +16997,7 @@ class LightProbeNode extends AnalyticLightNode {
 		 *
 		 * @type {UniformArrayNode}
 		 */
-		this.lightProbe = uniformArray( array );
+		this.lightProbe = uniformArray( array ).setGroup( renderGroup );
 
 	}
 
@@ -17497,9 +17962,10 @@ class NodeManager extends DataMap {
 	 *
 	 * @param {Node} computeNode - The compute node.
 	 * @param {boolean} [useAsync=false] - Whether to use async build with yielding.
+	 * @param {Function} [yieldFn=yieldToMain] - The function used to yield to the main thread in an async build.
 	 * @return {NodeBuilderState|Promise<NodeBuilderState>} The node builder state (or Promise if async).
 	 */
-	getForCompute( computeNode, useAsync = false ) {
+	getForCompute( computeNode, useAsync = false, yieldFn = yieldToMain ) {
 
 		const computeData = this.get( computeNode );
 
@@ -17516,7 +17982,7 @@ class NodeManager extends DataMap {
 
 			if ( useAsync ) {
 
-				return nodeBuilder.buildAsync().then( () => {
+				return nodeBuilder.buildAsync( yieldFn ).then( () => {
 
 					nodeBuilderState = this._createNodeBuilderState( nodeBuilder );
 
@@ -17547,11 +18013,12 @@ class NodeManager extends DataMap {
 	 * Use this in compileComputeAsync() to prevent blocking the main thread.
 	 *
 	 * @param {Node} computeNode - The compute node.
+	 * @param {Function} [yieldFn=yieldToMain] - The function used to yield to the main thread.
 	 * @return {Promise<NodeBuilderState>} A promise that resolves to the node builder state.
 	 */
-	getForComputeAsync( computeNode ) {
+	getForComputeAsync( computeNode, yieldFn = yieldToMain ) {
 
-		const result = this.getForCompute( computeNode, true );
+		const result = this.getForCompute( computeNode, true, yieldFn );
 
 		if ( result.then ) {
 
@@ -18824,6 +19291,24 @@ class Lighting {
 		 */
 		this._lightsNodeMap = new WeakMap();
 
+		/**
+		 * Weak references to the lights nodes created by this lighting manager, so they
+		 * can be disposed with {@link Lighting#dispose} without keeping scenes alive.
+		 *
+		 * @private
+		 * @type {Set<WeakRef<LightsNode>>}
+		 */
+		this._tracked = new Set();
+
+		/**
+		 * Removes weak references from `_tracked` when their lights node has been
+		 * garbage collected without an explicit `dispose()`.
+		 *
+		 * @private
+		 * @type {FinalizationRegistry}
+		 */
+		this._registry = new FinalizationRegistry( ( ref ) => this._tracked.delete( ref ) );
+
 	}
 
 	/**
@@ -18855,10 +19340,27 @@ class Lighting {
 
 			node = this.createNode();
 			this._lightsNodeMap.set( scene, node );
+			this._track( node );
 
 		}
 
 		return node;
+
+	}
+
+	/**
+	 * Tracks the given lights node so it is disposed with {@link Lighting#dispose}.
+	 * Subclasses creating additional lights nodes should track them as well.
+	 *
+	 * @private
+	 * @param {LightsNode} node - The lights node.
+	 */
+	_track( node ) {
+
+		const ref = new WeakRef( node );
+
+		this._tracked.add( ref );
+		this._registry.register( node, ref, ref );
 
 	}
 
@@ -18886,6 +19388,30 @@ class Lighting {
 	finishRender( scene ) {
 
 		this.getNode( scene ).setLights( this._cache.pop() );
+
+	}
+
+	/**
+	 * Frees the resources of the lights nodes created by this lighting manager. Called by
+	 * the renderer when it is disposed, or by the app after replacing the lighting system.
+	 * The lighting manager must not be used for rendering anymore after this call.
+	 */
+	dispose() {
+
+		for ( const ref of this._tracked ) {
+
+			const node = ref.deref();
+
+			if ( node !== undefined ) {
+
+				this._registry.unregister( ref );
+				node.dispose();
+
+			}
+
+		}
+
+		this._tracked.clear();
 
 	}
 
@@ -20088,9 +20614,12 @@ class XRManager extends EventDispatcher {
 
 					contextNode = context( {
 
-						getOutput: ( outputNode ) => {
+						getOutput: ( outputNode, builder ) => {
 
-							return renderOutput( outputNode, renderer.toneMapping, renderer.outputColorSpace );
+							const renderOutputNode = renderOutput( outputNode, renderer.toneMapping, renderer.outputColorSpace );
+							renderOutputNode.premultipliedAlpha = builder.material.premultipliedAlpha;
+
+							return renderOutputNode;
 
 						},
 
@@ -21228,6 +21757,85 @@ const _vector4 = /*@__PURE__*/ new Vector4();
 
 const _shadowSide = { [ FrontSide ]: BackSide, [ BackSide ]: FrontSide, [ DoubleSide ]: DoubleSide };
 
+// The time in milliseconds an async compilation works before it yields to the main thread.
+const _compileYieldInterval = 8;
+
+// The maximum number of pipelines an async compilation creates at the same time.
+// Too many pipelines in flight stall the rendering of new frames.
+const _maxCompilingPipelines = 16;
+
+/**
+ * Yields to the main thread during an async compilation, but only after a time
+ * budget, so the compilation does not wait for a new task or frame after every
+ * small piece of work.
+ *
+ * @private
+ */
+class CompileScheduler {
+
+	constructor() {
+
+		this.lastYieldTime = performance.now();
+
+	}
+
+	/**
+	 * Whether the compilation worked longer than the time budget since the last yield.
+	 *
+	 * @return {boolean} Whether the compilation should yield to the main thread.
+	 */
+	needsYield() {
+
+		return performance.now() - this.lastYieldTime >= _compileYieldInterval;
+
+	}
+
+	/**
+	 * Yields to the main thread until the next frame was rendered. `scheduler.yield()`
+	 * alone is not enough, since its continuations run before the browser renders.
+	 *
+	 * @return {Promise} A promise that resolves when the compilation can continue.
+	 */
+	async yield() {
+
+		if ( typeof requestAnimationFrame === 'undefined' || ( typeof document !== 'undefined' && document.hidden === true ) ) {
+
+			// no frames are rendered
+			await yieldToMain();
+
+		} else {
+
+			await new Promise( ( resolve ) => {
+
+				let resolved = false;
+
+				const done = () => {
+
+					if ( resolved === false ) {
+
+						resolved = true;
+						resolve();
+
+					}
+
+				};
+
+				// continue in a new task after the next frame was rendered
+				requestAnimationFrame( () => setTimeout( done, 0 ) );
+
+				// requestAnimationFrame() stops if the page is hidden in the meantime
+				setTimeout( done, 100 );
+
+			} );
+
+		}
+
+		this.lastYieldTime = performance.now();
+
+	}
+
+}
+
 /**
  * Base class for renderers.
  */
@@ -21462,6 +22070,14 @@ class Renderer {
 		this._onCanvasTargetResize = this._onCanvasTargetResize.bind( this );
 
 		/**
+		 * OnCanvasTargetDispose callback function.
+		 *
+		 * @private
+		 * @type {Function}
+		 */
+		this._onCanvasTargetDispose = this._onCanvasTargetDispose.bind( this );
+
+		/**
 		 * The canvas target for rendering.
 		 *
 		 * @private
@@ -21469,6 +22085,7 @@ class Renderer {
 		 */
 		this._canvasTarget = new CanvasTarget( backend.getDomElement() );
 		this._canvasTarget.addEventListener( 'resize', this._onCanvasTargetResize );
+		this._canvasTarget.addEventListener( 'dispose', this._onCanvasTargetDispose );
 		this._canvasTarget.isDefaultCanvasTarget = true;
 
 		/**
@@ -22113,13 +22730,16 @@ class Renderer {
 		const activeCubeFace = this._activeCubeFace;
 		const activeMipmapLevel = this._activeMipmapLevel;
 
-		// a state snapshot is taken once at the beginning and reapplied every time precompilation continues
+		// a state snapshot is taken once at the beginning and reapplied every time precompilation continues.
+		// `item` is the work item that is currently processed, see `_beginPreCompile()`
 
-		const precompilationState = { useFrameBufferTarget, renderTarget, outputRenderTarget, activeCubeFace, activeMipmapLevel };
+		const precompilationState = { useFrameBufferTarget, renderTarget, outputRenderTarget, activeCubeFace, activeMipmapLevel, item: null, materialSide: null };
 
 		this._beginPreCompile( precompilationState );
 
 		const renderContext = this._renderContexts.get( renderTarget, this._mrt, this._callDepth );
+
+		precompilationState.renderContext = renderContext;
 
 		const compilationPromises = [];
 
@@ -22242,17 +22862,35 @@ class Renderer {
 
 		this._finishPreCompile();
 
-		// Process compilation work items sequentially to avoid freezing
-		// Yields between objects to keep animation smooth
+		// Process compilation work items sequentially and yield to the main thread after a
+		// time budget to keep animation smooth. Pipelines are compiled in parallel while
+		// the next items are processed.
 
 		const total = compilationPromises.length;
 		let loaded = 0;
 
+		const scheduler = new CompileScheduler();
+		const compilingPipelines = new Set();
+
+		const onLoaded = () => {
+
+			loaded ++;
+
+			if ( onProgress !== null ) {
+
+				onProgress( new ProgressEvent( 'progress', { lengthComputable: true, loaded, total } ) );
+
+			}
+
+		};
+
 		const yieldPreCompile = async () => {
+
+			if ( scheduler.needsYield() === false ) return;
 
 			this._finishPreCompile();
 
-			await yieldToMain();
+			await scheduler.yield();
 
 			this._beginPreCompile( precompilationState );
 
@@ -22262,11 +22900,13 @@ class Renderer {
 
 			const pipelinePromises = [];
 
+			precompilationState.item = item;
+
+			this._beginPreCompile( precompilationState );
+
 			const renderObject = this._objects.get( item.object, item.material, item.scene, item.camera, item.lightsNode, item.renderContext, item.clippingContext, item.passId );
 			renderObject.drawRange = item.object.geometry.drawRange;
 			renderObject.group = item.group;
-
-			this._beginPreCompile( precompilationState );
 
 			await this._nodes.getForRenderAsync( renderObject, yieldPreCompile );
 			this._nodes.updateBefore( renderObject );
@@ -22278,26 +22918,32 @@ class Renderer {
 
 			this._finishPreCompile();
 
+			precompilationState.item = null;
+
 			if ( pipelinePromises.length > 0 ) {
 
-				// Wait for pipeline creation
+				const promise = Promise.all( pipelinePromises ).then( () => {
 
-				await Promise.all( pipelinePromises );
+					compilingPipelines.delete( promise );
+					onLoaded();
+
+				} );
+
+				compilingPipelines.add( promise );
+
+				while ( compilingPipelines.size >= _maxCompilingPipelines ) await Promise.race( compilingPipelines );
+
+			} else {
+
+				onLoaded();
 
 			}
 
-			loaded ++;
-
-			if ( onProgress !== null ) {
-
-				onProgress( new ProgressEvent( 'progress', { lengthComputable: true, loaded, total } ) );
-
-			}
-
-			// Yield between objects to allow animation frames
-			await yieldToMain();
+			if ( scheduler.needsYield() ) await scheduler.yield();
 
 		}
+
+		await Promise.all( compilingPipelines );
 
 	}
 
@@ -22311,11 +22957,27 @@ class Renderer {
 	 */
 	_beginPreCompile( precompilationState ) {
 
-		const { useFrameBufferTarget, renderTarget } = precompilationState;
+		const { useFrameBufferTarget, renderTarget, renderContext, item } = precompilationState;
 
 		if ( useFrameBufferTarget === true ) this.setRenderTarget( renderTarget );
 
+		if ( item !== null ) {
+
+			// apply the material side the work item was queued with since the renderer changes the side
+			// temporarily, e.g. for the back and front pass of double-sided transparent materials
+
+			precompilationState.materialSide = item.material.side;
+			item.material.side = item.side;
+
+		}
+
 		this._callDepth ++;
+
+		// node builds take their shared bind groups from the current render context
+
+		precompilationState.previousRenderContext = this._currentRenderContext;
+
+		if ( renderContext !== undefined ) this._currentRenderContext = renderContext;
 
 		this._precompilationState = precompilationState;
 
@@ -22328,9 +22990,13 @@ class Renderer {
 	 */
 	_finishPreCompile() {
 
-		const { useFrameBufferTarget, outputRenderTarget, activeCubeFace, activeMipmapLevel } = this._precompilationState;
+		const { useFrameBufferTarget, outputRenderTarget, activeCubeFace, activeMipmapLevel, previousRenderContext, item, materialSide } = this._precompilationState;
 
 		if ( useFrameBufferTarget === true ) this.setRenderTarget( outputRenderTarget, activeCubeFace, activeMipmapLevel );
+
+		if ( item !== null ) item.material.side = materialSide;
+
+		this._currentRenderContext = previousRenderContext;
 
 		this._callDepth --;
 
@@ -22365,6 +23031,27 @@ class Renderer {
 		const total = computeList.length;
 		let loaded = 0;
 
+		const scheduler = new CompileScheduler();
+		const compilingPipelines = new Set();
+
+		const onLoaded = () => {
+
+			loaded ++;
+
+			if ( onProgress !== null ) {
+
+				onProgress( new ProgressEvent( 'progress', { lengthComputable: true, loaded, total } ) );
+
+			}
+
+		};
+
+		const yieldCompile = async () => {
+
+			if ( scheduler.needsYield() ) await scheduler.yield();
+
+		};
+
 		//
 
 		const pipelines = this._pipelines;
@@ -22397,7 +23084,7 @@ class Renderer {
 
 			}
 
-			await nodes.getForComputeAsync( computeNode );
+			await nodes.getForComputeAsync( computeNode, yieldCompile );
 
 			nodes.updateBeforeForCompute( computeNode );
 			nodes.updateForCompute( computeNode );
@@ -22407,21 +23094,35 @@ class Renderer {
 			const compilationPromises = [];
 
 			pipelines.getForCompute( computeNode, computeBindings, compilationPromises );
-			await Promise.all( compilationPromises );
 
 			nodes.updateAfterForCompute( computeNode );
 
-			loaded ++;
+			// Pipelines are compiled in parallel while the next compute nodes are processed
 
-			if ( onProgress !== null ) {
+			if ( compilationPromises.length > 0 ) {
 
-				onProgress( new ProgressEvent( 'progress', { lengthComputable: true, loaded, total } ) );
+				const promise = Promise.all( compilationPromises ).then( () => {
+
+					compilingPipelines.delete( promise );
+					onLoaded();
+
+				} );
+
+				compilingPipelines.add( promise );
+
+				while ( compilingPipelines.size >= _maxCompilingPipelines ) await Promise.race( compilingPipelines );
+
+			} else {
+
+				onLoaded();
 
 			}
 
-			if ( loaded < total ) await yieldToMain();
+			await yieldCompile();
 
 		}
+
+		await Promise.all( compilingPipelines );
 
 	}
 
@@ -23008,12 +23709,14 @@ class Renderer {
 
 		let viewport = canvasTarget._viewport;
 		let scissor = canvasTarget._scissor;
+		let scissorTest = canvasTarget._scissorTest;
 		let pixelRatio = canvasTarget._pixelRatio;
 
 		if ( renderTarget !== null ) {
 
 			viewport = renderTarget.viewport;
 			scissor = renderTarget.scissor;
+			scissorTest = renderTarget.scissorTest;
 			pixelRatio = 1;
 
 		}
@@ -23122,7 +23825,7 @@ class Renderer {
 		_screen.set( 0, 0, renderContext.width, renderContext.height );
 
 		renderContext.viewport = renderContext.viewportValue.equals( _screen ) === false;
-		renderContext.scissor = canvasTarget._scissorTest && renderContext.scissorValue.equals( _screen ) === false;
+		renderContext.scissor = scissorTest && renderContext.scissorValue.equals( _screen ) === false;
 
 		//
 
@@ -23321,10 +24024,10 @@ class Renderer {
 	 * from the GPU to the CPU in context of compute shaders.
 	 *
 	 * @async
-	 * @param {BufferAttribute} attribute - The storage buffer attribute to read frm.
-	 * @param {ReadbackBuffer|ArrayBuffer} target - The storage buffer attribute.
-	 * @param {number} offset - The storage buffer attribute.
-	 * @param {number} count - The offset from which to start reading the
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
 	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
 	async getArrayBufferAsync( attribute, target = null, offset = 0, count = -1 ) {
@@ -23938,6 +24641,7 @@ class Renderer {
 
 		if ( this._initialized === true ) {
 
+			this.lighting.dispose();
 			this._inspector.dispose();
 			this._animation.dispose();
 			this._objects.dispose();
@@ -23954,6 +24658,8 @@ class Renderer {
 				canvasTarget.dispose();
 
 			}
+
+			this._destroyCanvasTarget( this._canvasTarget );
 
 			this._textures.dispose();
 			this.info.dispose();
@@ -24025,9 +24731,12 @@ class Renderer {
 	setCanvasTarget( canvasTarget ) {
 
 		this._canvasTarget.removeEventListener( 'resize', this._onCanvasTargetResize );
+		// keep any dispose event listener attached for later use
 
 		this._canvasTarget = canvasTarget;
+
 		this._canvasTarget.addEventListener( 'resize', this._onCanvasTargetResize );
+		this._canvasTarget.addEventListener( 'dispose', this._onCanvasTargetDispose );
 
 	}
 
@@ -24127,6 +24836,20 @@ class Renderer {
 
 		}
 
+		const computeList = Array.isArray( computeNodes ) ? computeNodes : [ computeNodes ];
+
+		if ( computeList.length === 0 || computeList.some( computeNode => computeNode?.isComputeNode !== true ) ) {
+
+			throw new Error( 'THREE.Renderer: ".compute()" expects a "ComputeNode".' );
+
+		}
+
+		if ( dispatchSize !== null && computeList.some( computeNode => computeNode.count !== null || computeNode.dispatchSize !== null ) ) {
+
+			throw new Error( 'THREE.Renderer: A dispatch size cannot be passed to "renderer.compute()" for nodes created with "compute( count )". Use "computeKernel()" instead.' );
+
+		}
+
 		//
 
 		const nodeFrame = this._nodes.nodeFrame;
@@ -24153,14 +24876,6 @@ class Renderer {
 		const pipelines = this._pipelines;
 		const bindings = this._bindings;
 		const nodes = this._nodes;
-
-		const computeList = Array.isArray( computeNodes ) ? computeNodes : [ computeNodes ];
-
-		if ( computeList[ 0 ] === undefined || computeList[ 0 ].isComputeNode !== true ) {
-
-			throw new Error( 'THREE.Renderer: .compute() expects a ComputeNode.' );
-
-		}
 
 		backend.beginCompute( computeNodes );
 
@@ -25184,10 +25899,12 @@ class Renderer {
 		// If in async compilation mode, queue the work for sequential execution
 		if ( this._compilationPromises !== null ) {
 
-			// Store work items instead of promises - will be processed sequentially
+			// Store work items instead of promises - will be processed sequentially.
+			// The side is stored since the renderer might have changed it temporarily.
 			this._compilationPromises.push( {
 				object,
 				material,
+				side: material.side,
 				scene,
 				camera,
 				lightsNode,
@@ -25229,6 +25946,32 @@ class Renderer {
 	_onCanvasTargetResize() {
 
 		if ( this._initialized ) this.backend.updateSize();
+
+	}
+
+	/**
+	 * Callback when a canvas target has been disposed.
+	 *
+	 * @private
+	 * @param {Object} event - The dispose event.
+	 */
+	_onCanvasTargetDispose( event ) {
+
+		this._destroyCanvasTarget( event.target );
+
+	}
+
+	/**
+	 * Frees the GPU resources of the given canvas target.
+	 *
+	 * @private
+	 * @param {CanvasTarget} canvasTarget - The canvas target.
+	 */
+	_destroyCanvasTarget( canvasTarget ) {
+
+		canvasTarget.removeEventListener( 'dispose', this._onCanvasTargetDispose );
+
+		if ( this._initialized ) this.backend.destroyCanvasTarget( canvasTarget );
 
 	}
 
@@ -25418,7 +26161,7 @@ class Buffer extends Binding {
 	 */
 	get byteLength() {
 
-		return getFloatLength( this._buffer.byteLength );
+		return getFloatLength( this.buffer.byteLength );
 
 	}
 
@@ -25509,7 +26252,7 @@ class NodeUniformBuffer extends UniformBuffer {
 
 		const label = nodeUniform && nodeUniform.name ? nodeUniform.name : _id$4 ++;
 
-		super( 'UniformBuffer_' + label, nodeUniform ? nodeUniform.value : null );
+		super( 'UniformBuffer_' + label );
 
 		/**
 		 * The uniform buffer node.
@@ -25576,18 +26319,6 @@ class NodeUniformBuffer extends UniformBuffer {
 	clearUpdateRanges() {
 
 		this.nodeUniform.clearUpdateRanges();
-
-	}
-
-	/**
-	 * The buffer's byte length.
-	 *
-	 * @type {number}
-	 * @readonly
-	 */
-	get byteLength() {
-
-		return getFloatLength( this.buffer.byteLength );
 
 	}
 
@@ -25859,6 +26590,25 @@ class UniformsGroup extends UniformBuffer {
 		super.release();
 
 		this._values = null;
+
+	}
+
+	/**
+	 * Returns a clone of this uniforms group. The clone has its own buffer and update state.
+	 *
+	 * @return {UniformsGroup} The cloned uniforms group.
+	 */
+	clone() {
+
+		const clone = super.clone();
+
+		clone._buffer = null;
+		clone._values = null;
+		clone._updateRanges = [];
+		clone._updateRangeCache = new Map();
+		clone._addedIndices = new Set();
+
+		return clone;
 
 	}
 
@@ -27434,6 +28184,18 @@ ${ flowData.code }
 	}
 
 	/**
+	 * Returns the uniform block name of the given buffer uniform.
+	 *
+	 * @param {NodeUniform} uniform - The buffer uniform.
+	 * @return {string} The uniform block name.
+	 */
+	getUniformBufferName( uniform ) {
+
+		return 'NodeBuffer_' + uniform.name;
+
+	}
+
+	/**
 	 * Returns the uniforms of the given shader stage as a GLSL string.
 	 *
 	 * @param {string} shaderStage - The shader stage.
@@ -27510,7 +28272,7 @@ ${ flowData.code }
 				const bufferCount = bufferNode.bufferCount;
 
 				const bufferCountSnippet = bufferCount > 0 ? bufferCount : '';
-				snippet = `${bufferNode.name} {\n\t${ bufferType } ${ uniform.name }[${ bufferCountSnippet }];\n};\n`;
+				snippet = `${ this.getUniformBufferName( uniform ) } {\n\t${ bufferType } ${ uniform.name }[${ bufferCountSnippet }];\n};\n`;
 
 			} else {
 
@@ -28393,7 +29155,7 @@ void main() {
 	 */
 	getUniformFromNode( node, type, shaderStage, name = null ) {
 
-		const uniformNode = super.getUniformFromNode( node, type, shaderStage, name );
+		const uniformNode = super.getUniformFromNode( node, type, shaderStage, type === 'buffer' ? null : name );
 		const nodeData = this.getDataFromNode( node, shaderStage, this.globalCache );
 
 		let uniformGPU = nodeData.uniformGPU;
@@ -28422,11 +29184,8 @@ void main() {
 
 			} else if ( type === 'buffer' ) {
 
-				node.name = `NodeBuffer_${ node.id }`;
-				uniformNode.name = `buffer${ node.id }`;
-
 				const buffer = new NodeUniformBuffer( node, group );
-				buffer.name = node.name;
+				buffer.name = this.getUniformBufferName( uniformNode );
 
 				bindings.push( buffer );
 
@@ -28979,6 +29738,14 @@ class Backend {
 	 */
 	updateViewport( /*renderContext*/ ) {}
 
+	/**
+	 * Frees the GPU resources of the given canvas target.
+	 *
+	 * @abstract
+	 * @param {CanvasTarget} canvasTarget - The canvas target.
+	 */
+	destroyCanvasTarget( /*canvasTarget*/ ) {}
+
 	// utils
 
 	/**
@@ -29111,6 +29878,31 @@ class Backend {
 	isOccluded( /*renderContext, object*/ ) {}
 
 	/**
+	 * Returns the occlusion query data of the given render context for its current camera.
+	 *
+	 * @param {RenderContext} renderContext - The render context.
+	 * @return {Object} The occlusion query data.
+	 */
+	getOcclusionData( renderContext ) {
+
+		const renderContextData = this.get( renderContext );
+
+		if ( renderContextData.occlusionData === undefined ) renderContextData.occlusionData = new WeakMap();
+
+		let occlusionData = renderContextData.occlusionData.get( renderContext.camera );
+
+		if ( occlusionData === undefined ) {
+
+			occlusionData = {};
+			renderContextData.occlusionData.set( renderContext.camera, occlusionData );
+
+		}
+
+		return occlusionData;
+
+	}
+
+	/**
 	 * Resolves the time stamp for the given render context and type.
 	 *
 	 * @async
@@ -29148,10 +29940,13 @@ class Backend {
 	 * a storage buffer attribute from the GPU to the CPU.
 	 *
 	 * @async
-	 * @param {StorageBufferAttribute} attribute - The storage buffer attribute.
-	 * @return {Promise<ArrayBuffer>} A promise that resolves with the buffer data when the data are ready.
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
+	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
-	async getArrayBufferAsync( /* attribute */ ) {}
+	async getArrayBufferAsync( /* attribute, target, offset, count */ ) {}
 
 	/**
 	 * Checks if the given feature is supported by the backend.
@@ -29534,23 +30329,27 @@ class WebGLAttributeUtils {
 		const array = attribute.array;
 		const bufferAttribute = backend.getBufferAttribute( attribute );
 		const bufferData = backend.get( bufferAttribute );
-		const bufferType = bufferData.bufferType;
 		const updateRanges = bufferAttribute.updateRanges;
 
-		gl.bindBuffer( bufferType, bufferData.bufferGPU );
+		// the element buffer binding is part of the VAO state, so index buffers are updated
+		// via the copy target to keep the bound VAO intact
+
+		const target = bufferData.bufferType === gl.ELEMENT_ARRAY_BUFFER ? gl.COPY_WRITE_BUFFER : bufferData.bufferType;
+
+		gl.bindBuffer( target, bufferData.bufferGPU );
 
 		if ( updateRanges.length === 0 ) {
 
 			// Not using update ranges
 
-			gl.bufferSubData( bufferType, 0, array );
+			gl.bufferSubData( target, 0, array );
 
 		} else {
 
 			for ( let i = 0, l = updateRanges.length; i < l; i ++ ) {
 
 				const range = updateRanges[ i ];
-				gl.bufferSubData( bufferType, range.start * array.BYTES_PER_ELEMENT,
+				gl.bufferSubData( target, range.start * array.BYTES_PER_ELEMENT,
 					array, range.start, range.count );
 
 			}
@@ -29559,7 +30358,7 @@ class WebGLAttributeUtils {
 
 		}
 
-		gl.bindBuffer( bufferType, null );
+		gl.bindBuffer( target, null );
 
 		bufferData.version = bufferAttribute.version;
 
@@ -29604,10 +30403,10 @@ class WebGLAttributeUtils {
 	 * new allocation.
 	 *
 	 * @async
-	 * @param {BufferAttribute} attribute - The storage buffer attribute to read frm.
-	 * @param {ReadbackBuffer|ArrayBuffer} target - The storage buffer attribute.
-	 * @param {number} offset - The storage buffer attribute.
-	 * @param {number} count - The offset from which to start reading the
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
 	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
 	async getArrayBufferAsync( attribute, target = null, offset = 0, count = -1 ) {
@@ -29691,6 +30490,13 @@ class WebGLAttributeUtils {
 
 		const bufferGPU = gl.createBuffer();
 
+		// the element buffer binding is part of the VAO state, so the bound VAO must not be affected.
+		// the first binding defines the buffer type so the copy target can not be used here
+
+		const state = this.backend.state;
+
+		if ( bufferType === gl.ELEMENT_ARRAY_BUFFER && state.currentVAO !== null ) state.resetVertexState();
+
 		gl.bindBuffer( bufferType, bufferGPU );
 		gl.bufferData( bufferType, array, usage );
 		gl.bindBuffer( bufferType, null );
@@ -29705,7 +30511,8 @@ class WebGLAttributeUtils {
  * A WebGL 2 backend utility module for managing vertex array objects (VAOs).
  *
  * VAOs are shared between all owners (render objects and compute pipelines)
- * that use the same GPU buffers and deleted when the last owner releases them.
+ * that use the same GPU buffers and deleted when the last owner releases them
+ * or when one of their buffers is destroyed.
  *
  * @private
  */
@@ -29741,14 +30548,18 @@ class WebGLVertexArrayUtils {
 	 *
 	 * @param {RenderObject|ComputePipeline} owner - The render object or compute pipeline using the VAO.
 	 * @param {Array<BufferAttribute>} attributes - An array of buffer attributes.
+	 * @param {?BufferAttribute} [index=null] - The index attribute.
 	 * @return {WebGLVertexArrayObject} The VAO.
 	 */
-	getVAO( owner, attributes ) {
+	getVAO( owner, attributes, index = null ) {
 
 		const backend = this.backend;
 		const ownerData = backend.get( owner );
 
-		if ( this._needsUpdate( ownerData, attributes ) === false ) return ownerData.vaoGPU;
+		const indexData = ( index !== null ) ? backend.get( index ) : null;
+		const indexGPU = ( indexData !== null ) ? indexData.bufferGPU : null;
+
+		if ( this._needsUpdate( ownerData, attributes, indexGPU ) === false ) return ownerData.vaoGPU;
 
 		// determine key, variant and attribute buffers
 
@@ -29756,6 +30567,7 @@ class WebGLVertexArrayUtils {
 		let variant = '';
 
 		const buffers = [];
+		const buffersData = [];
 
 		for ( let i = 0; i < attributes.length; i ++ ) {
 
@@ -29769,6 +30581,17 @@ class WebGLVertexArrayUtils {
 			variant += ':' + ( attributeData.activeBufferIndex || 0 );
 
 			buffers.push( attributeData.bufferGPU );
+			buffersData.push( attributeData );
+
+		}
+
+		// the element buffer binding is part of the VAO state
+
+		if ( indexData !== null ) {
+
+			key += '|' + indexData.id;
+
+			buffersData.push( indexData );
 
 		}
 
@@ -29782,9 +30605,19 @@ class WebGLVertexArrayUtils {
 
 			if ( entry === undefined ) {
 
-				entry = { vaos: new Map(), usedTimes: 0 };
+				entry = { vaos: new Map(), buffersData, usedTimes: 0 };
 
 				this.cache.set( key, entry );
+
+				// each buffer knows its VAOs so they can be deleted with the buffer
+
+				for ( const bufferData of buffersData ) {
+
+					if ( bufferData.vaoKeys === undefined ) bufferData.vaoKeys = new Set();
+
+					bufferData.vaoKeys.add( key );
+
+				}
 
 			}
 
@@ -29800,7 +30633,7 @@ class WebGLVertexArrayUtils {
 
 		if ( vaoGPU === undefined ) {
 
-			vaoGPU = this._createVAO( attributes );
+			vaoGPU = this._createVAO( attributes, indexGPU );
 
 			entry.vaos.set( variant, vaoGPU );
 
@@ -29808,6 +30641,7 @@ class WebGLVertexArrayUtils {
 
 		ownerData.vaoGPU = vaoGPU;
 		ownerData.vertexBuffers = buffers;
+		ownerData.indexBuffer = indexGPU;
 
 		return vaoGPU;
 
@@ -29829,6 +30663,26 @@ class WebGLVertexArrayUtils {
 		ownerData.vaoKey = undefined;
 		ownerData.vaoGPU = undefined;
 		ownerData.vertexBuffers = undefined;
+		ownerData.indexBuffer = undefined;
+
+	}
+
+	/**
+	 * Deletes all VAOs referencing the given attribute buffer. Must be called
+	 * when the buffer is destroyed since VAOs keep the memory of attached buffers
+	 * allocated. Owners of deleted VAOs request a new one with their next draw.
+	 *
+	 * @param {Object} bufferData - The backend data of the attribute buffer.
+	 */
+	releaseBuffer( bufferData ) {
+
+		if ( bufferData.vaoKeys === undefined ) return;
+
+		for ( const key of bufferData.vaoKeys ) {
+
+			this._deleteEntry( key );
+
+		}
 
 	}
 
@@ -29860,13 +30714,14 @@ class WebGLVertexArrayUtils {
 	 * @private
 	 * @param {Object} ownerData - The backend data of the owner.
 	 * @param {Array<BufferAttribute>} attributes - An array of buffer attributes.
+	 * @param {?WebGLBuffer} indexGPU - The index buffer.
 	 * @return {boolean} Whether the owner requires a different VAO or not.
 	 */
-	_needsUpdate( ownerData, attributes ) {
+	_needsUpdate( ownerData, attributes, indexGPU ) {
 
 		const buffers = ownerData.vertexBuffers;
 
-		if ( buffers === undefined || buffers.length !== attributes.length ) return true;
+		if ( buffers === undefined || buffers.length !== attributes.length || ownerData.indexBuffer !== indexGPU ) return true;
 
 		for ( let i = 0; i < attributes.length; i ++ ) {
 
@@ -29890,21 +30745,41 @@ class WebGLVertexArrayUtils {
 
 		const entry = this.cache.get( key );
 
+		if ( entry === undefined ) return; // already deleted with one of its buffers
+
 		entry.usedTimes --;
 
-		if ( entry.usedTimes === 0 ) {
+		if ( entry.usedTimes === 0 ) this._deleteEntry( key );
 
-			const { gl } = this.backend;
+	}
 
-			for ( const vaoGPU of entry.vaos.values() ) {
+	/**
+	 * Deletes all VAO variants of the given cache entry.
+	 *
+	 * @private
+	 * @param {string} key - The cache key.
+	 */
+	_deleteEntry( key ) {
 
-				gl.deleteVertexArray( vaoGPU );
+		const { gl, state } = this.backend;
 
-			}
+		const entry = this.cache.get( key );
 
-			this.cache.delete( key );
+		for ( const vaoGPU of entry.vaos.values() ) {
+
+			if ( state.currentVAO === vaoGPU ) state.resetVertexState();
+
+			gl.deleteVertexArray( vaoGPU );
 
 		}
+
+		for ( const bufferData of entry.buffersData ) {
+
+			bufferData.vaoKeys.delete( key );
+
+		}
+
+		this.cache.delete( key );
 
 	}
 
@@ -29913,15 +30788,16 @@ class WebGLVertexArrayUtils {
 	 *
 	 * @private
 	 * @param {Array<BufferAttribute>} attributes - An array of buffer attributes.
+	 * @param {?WebGLBuffer} indexGPU - The index buffer.
 	 * @return {WebGLVertexArrayObject} The VAO.
 	 */
-	_createVAO( attributes ) {
+	_createVAO( attributes, indexGPU ) {
 
 		const { gl, state } = this.backend;
 
 		const vaoGPU = gl.createVertexArray();
 
-		state.setVertexState( vaoGPU );
+		state.setVertexState( vaoGPU, indexGPU );
 
 		for ( let i = 0; i < attributes.length; i ++ ) {
 
@@ -30248,6 +31124,13 @@ class WebGLState {
 
 	}
 
+	/**
+	 * Defines the blending for each draw buffer of a MRT-configured render target.
+	 *
+	 * @param {Array<Texture>} textures - The textures of the render target.
+	 * @param {?MRTNode} mrt - The MRT configuration.
+	 * @param {Material} material - The material whose blending is used for outputs with `MaterialBlending`.
+	 */
 	setMRTBlending( textures, mrt, material ) {
 
 		const gl = this.gl;
@@ -30301,6 +31184,17 @@ class WebGLState {
 			}
 
 		}
+
+		// invalidate cache
+
+		this.currentBlending = null;
+		this.currentBlendEquation = null;
+		this.currentBlendEquationAlpha = null;
+		this.currentBlendSrc = null;
+		this.currentBlendDst = null;
+		this.currentBlendSrcAlpha = null;
+		this.currentBlendDstAlpha = null;
+		this.currentPremultipledAlpha = null;
 
 	}
 
@@ -32952,9 +33846,9 @@ class WebGLTextureUtils {
 	setupRenderBufferStorage( renderbuffer, renderContext, samples, useMultisampledRTT = false ) {
 
 		const { gl } = this;
-		const renderTarget = renderContext.renderTarget;
+		const { depthTexture, renderTarget } = renderContext;
 
-		const { depthTexture, depthBuffer, stencilBuffer, width, height } = renderTarget;
+		const { depthBuffer, stencilBuffer, width, height } = renderTarget;
 
 		gl.bindRenderbuffer( gl.RENDERBUFFER, renderbuffer );
 
@@ -34158,13 +35052,6 @@ class WebGLBackend extends Backend {
 		this.utils = null;
 
 		/**
-		 * Dictionary for caching transform feedback objects.
-		 *
-		 * @type {Object<string,WebGLTransformFeedback>}
-		 */
-		this.transformFeedbackCache = {};
-
-		/**
 		 * Controls if `gl.RASTERIZER_DISCARD` should be enabled or not.
 		 * Only relevant when using compute shaders.
 		 *
@@ -34350,10 +35237,10 @@ class WebGLBackend extends Backend {
 	 * new allocation.
 	 *
 	 * @async
-	 * @param {BufferAttribute} attribute - The storage buffer attribute to read frm.
-	 * @param {ReadbackBuffer|ArrayBuffer} target - The storage buffer attribute.
-	 * @param {number} offset - The storage buffer attribute.
-	 * @param {number} count - The offset from which to start reading the
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
 	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
 	async getArrayBufferAsync( attribute, target = null, offset = 0, count = -1 ) {
@@ -34525,6 +35412,8 @@ class WebGLBackend extends Backend {
 
 		}
 
+		state.setScissorTest( renderContext.scissor );
+
 		//
 
 		this.initTimestampQuery( TimestampQuery.RENDER, this.getTimestampUID( renderContext ) );
@@ -34536,24 +35425,25 @@ class WebGLBackend extends Backend {
 		this.clear( renderContext.clearColor, renderContext.clearDepth, renderContext.clearStencil, renderContext, false );
 
 		const occlusionQueryCount = renderContext.occlusionQueryCount;
+		const occlusionData = this.getOcclusionData( renderContext );
 
 		if ( occlusionQueryCount > 0 ) {
 
-			// Get a reference to the array of objects with queries. The renderContextData property
+			// Get a reference to the array of objects with queries. The occlusionData property
 			// can be changed by another render pass before the async reading of all previous queries complete
-			renderContextData.currentOcclusionQueries = renderContextData.occlusionQueries;
-			renderContextData.currentOcclusionQueryObjects = renderContextData.occlusionQueryObjects;
+			occlusionData.currentOcclusionQueries = occlusionData.occlusionQueries;
+			occlusionData.currentOcclusionQueryObjects = occlusionData.occlusionQueryObjects;
 
-			renderContextData.lastOcclusionObject = null;
-			renderContextData.occlusionQueries = new Array( occlusionQueryCount );
-			renderContextData.occlusionQueryObjects = new Array( occlusionQueryCount );
-			renderContextData.occlusionQueryIndex = 0;
+			occlusionData.lastOcclusionObject = null;
+			occlusionData.occlusionQueries = new Array( occlusionQueryCount );
+			occlusionData.occlusionQueryObjects = new Array( occlusionQueryCount );
+			occlusionData.occlusionQueryIndex = 0;
 
-		} else if ( renderContextData.lastOcclusionObject !== undefined ) {
+		} else if ( occlusionData.lastOcclusionObject !== undefined ) {
 
 			// invalidate if there is a stale query
 
-			renderContextData.lastOcclusionObject = undefined;
+			occlusionData.lastOcclusionObject = undefined;
 
 		}
 
@@ -34577,7 +35467,7 @@ class WebGLBackend extends Backend {
 
 		if ( occlusionQueryCount > 0 ) {
 
-			const lastOcclusionObject = renderContextData.lastOcclusionObject;
+			const lastOcclusionObject = this.getOcclusionData( renderContext ).lastOcclusionObject;
 
 			if ( lastOcclusionObject && lastOcclusionObject.occlusionTest === true ) {
 
@@ -34637,6 +35527,8 @@ class WebGLBackend extends Backend {
 
 			}
 
+			state.setScissorTest( previousContext.scissor );
+
 		}
 
 		this.prepareTimestampBuffer( TimestampQuery.RENDER, this.getTimestampUID( renderContext ) );
@@ -34645,26 +35537,26 @@ class WebGLBackend extends Backend {
 
 	/**
 	 * This method processes the result of occlusion queries and writes it
-	 * into render context data.
+	 * into the occlusion data of the render context.
 	 *
 	 * @async
 	 * @param {RenderContext} renderContext - The render context.
 	 */
 	resolveOccludedAsync( renderContext ) {
 
-		const renderContextData = this.get( renderContext );
+		const occlusionData = this.getOcclusionData( renderContext );
 
 		// handle occlusion query results
 
-		const { currentOcclusionQueries, currentOcclusionQueryObjects } = renderContextData;
+		const { currentOcclusionQueries, currentOcclusionQueryObjects } = occlusionData;
 
 		if ( currentOcclusionQueries && currentOcclusionQueryObjects ) {
 
 			const occluded = new WeakSet();
 			const { gl } = this;
 
-			renderContextData.currentOcclusionQueryObjects = null;
-			renderContextData.currentOcclusionQueries = null;
+			occlusionData.currentOcclusionQueryObjects = null;
+			occlusionData.currentOcclusionQueries = null;
 
 			const check = () => {
 
@@ -34698,7 +35590,7 @@ class WebGLBackend extends Backend {
 
 				} else {
 
-					renderContextData.occluded = occluded;
+					occlusionData.occluded = occluded;
 
 				}
 
@@ -34720,9 +35612,9 @@ class WebGLBackend extends Backend {
 	 */
 	isOccluded( renderContext, object ) {
 
-		const renderContextData = this.get( renderContext );
+		const occlusionData = this.getOcclusionData( renderContext );
 
-		return renderContextData.occluded && renderContextData.occluded.has( object );
+		return occlusionData.occluded && occlusionData.occluded.has( object );
 
 	}
 
@@ -34956,7 +35848,12 @@ class WebGLBackend extends Backend {
 
 		}
 
-		const { programGPU, transformBuffers, attributes } = this.get( pipeline );
+		const { programGPU, transformAttributes, attributes } = this.get( pipeline );
+
+		// the buffers are managed by the renderer's attributes so they are re-created after disposal
+
+		for ( let i = 0; i < attributes.length; i ++ ) this._updateComputeAttribute( attributes[ i ] );
+		for ( let i = 0; i < transformAttributes.length; i ++ ) this._updateComputeAttribute( transformAttributes[ i ] );
 
 		const vaoGPU = this.vertexArrayUtils.getVAO( pipeline, attributes );
 
@@ -34966,9 +35863,15 @@ class WebGLBackend extends Backend {
 
 		this._bindUniforms( bindings );
 
-		const transformFeedbackGPU = this._getTransformFeedback( transformBuffers );
+		// the buffers are only bound to the default transform feedback object during the dispatch so
+		// no transform feedback object keeps the memory of disposed buffers allocated
 
-		gl.bindTransformFeedback( gl.TRANSFORM_FEEDBACK, transformFeedbackGPU );
+		for ( let i = 0; i < transformAttributes.length; i ++ ) {
+
+			gl.bindBufferBase( gl.TRANSFORM_FEEDBACK_BUFFER, i, this.get( transformAttributes[ i ] ).transformBuffer );
+
+		}
+
 		gl.beginTransformFeedback( gl.POINTS );
 
 		count = ( count !== null ) ? count : computeNode.count;
@@ -34998,13 +35901,18 @@ class WebGLBackend extends Backend {
 		}
 
 		gl.endTransformFeedback();
-		gl.bindTransformFeedback( gl.TRANSFORM_FEEDBACK, null );
+
+		for ( let i = 0; i < transformAttributes.length; i ++ ) {
+
+			gl.bindBufferBase( gl.TRANSFORM_FEEDBACK_BUFFER, i, null );
+
+		}
 
 		// switch active buffers
 
-		for ( let i = 0; i < transformBuffers.length; i ++ ) {
+		for ( let i = 0; i < transformAttributes.length; i ++ ) {
 
-			const dualAttributeData = transformBuffers[ i ];
+			const dualAttributeData = this.get( transformAttributes[ i ] );
 
 			if ( dualAttributeData.pbo && this.has( dualAttributeData.pbo ) ) {
 
@@ -35016,6 +35924,22 @@ class WebGLBackend extends Backend {
 
 
 		}
+
+	}
+
+	/**
+	 * Creates or updates the GPU buffer of the given compute attribute via the renderer's
+	 * attributes so it is tracked like other attributes.
+	 *
+	 * @private
+	 * @param {BufferAttribute|InterleavedBufferAttribute} attribute - The buffer attribute.
+	 */
+	_updateComputeAttribute( attribute ) {
+
+		const bufferAttribute = this.getBufferAttribute( attribute );
+		const attributeType = ( attribute.isStorageBufferAttribute || attribute.isStorageInstancedBufferAttribute ) ? AttributeType.STORAGE : AttributeType.VERTEX;
+
+		this.renderer._attributes.update( bufferAttribute, attributeType );
 
 	}
 
@@ -35120,8 +36044,6 @@ class WebGLBackend extends Backend {
 
 		const { gl, state } = this;
 
-		const contextData = this.get( context );
-
 		const drawParams = renderObject.getDrawParameters();
 
 		if ( drawParams === null ) return;
@@ -35144,39 +36066,44 @@ class WebGLBackend extends Backend {
 
 		// vertex state
 
-		const vaoGPU = this.vertexArrayUtils.getVAO( renderObject, renderObject.getAttributes() );
-
 		const index = renderObject.getIndex();
-		const indexGPU = ( index !== null ) ? this.get( index ).bufferGPU : null;
 
-		state.setVertexState( vaoGPU, indexGPU );
+		const vaoGPU = this.vertexArrayUtils.getVAO( renderObject, renderObject.getAttributes(), index );
+
+		state.setVertexState( vaoGPU );
 
 		//
 
-		const lastObject = contextData.lastOcclusionObject;
+		if ( context.occlusionQueryCount > 0 ) {
 
-		if ( lastObject !== object && lastObject !== undefined ) {
+			const occlusionData = this.getOcclusionData( context );
 
-			if ( lastObject !== null && lastObject.occlusionTest === true ) {
+			const lastObject = occlusionData.lastOcclusionObject;
 
-				gl.endQuery( gl.ANY_SAMPLES_PASSED );
+			if ( lastObject !== object ) {
 
-				contextData.occlusionQueryIndex ++;
+				if ( lastObject !== null && lastObject.occlusionTest === true ) {
+
+					gl.endQuery( gl.ANY_SAMPLES_PASSED );
+
+					occlusionData.occlusionQueryIndex ++;
+
+				}
+
+				if ( object.occlusionTest === true ) {
+
+					const query = gl.createQuery();
+
+					gl.beginQuery( gl.ANY_SAMPLES_PASSED, query );
+
+					occlusionData.occlusionQueries[ occlusionData.occlusionQueryIndex ] = query;
+					occlusionData.occlusionQueryObjects[ occlusionData.occlusionQueryIndex ] = object;
+
+				}
+
+				occlusionData.lastOcclusionObject = object;
 
 			}
-
-			if ( object.occlusionTest === true ) {
-
-				const query = gl.createQuery();
-
-				gl.beginQuery( gl.ANY_SAMPLES_PASSED, query );
-
-				contextData.occlusionQueries[ contextData.occlusionQueryIndex ] = query;
-				contextData.occlusionQueryObjects[ contextData.occlusionQueryIndex ] = object;
-
-			}
-
-			contextData.lastOcclusionObject = object;
 
 		}
 
@@ -35275,7 +36202,7 @@ class WebGLBackend extends Backend {
 			if ( isRenderCameraDepthArray ) {
 
 				// Clear the depth texture
-				const textureData = this.get( renderTarget.depthTexture );
+				const textureData = this.get( this._currentContext.depthTexture );
 
 				if ( textureData.clearedRenderId !== this.renderer._nodes.nodeFrame.renderId ) {
 
@@ -35797,7 +36724,7 @@ class WebGLBackend extends Backend {
 		const fragmentShader = this.get( fragmentProgram ).shaderGPU;
 		const vertexShader = this.get( computeProgram ).shaderGPU;
 
-		const transforms = computeProgram.transforms;
+		const transforms = computePipeline.transforms;
 
 		const transformVaryingNames = [];
 		const transformAttributeNodes = [];
@@ -35822,29 +36749,21 @@ class WebGLBackend extends Backend {
 
 		gl.linkProgram( programGPU );
 
-		const attributeNodes = computeProgram.attributes;
+		// only the attributes are stored since their buffers are re-created when they are disposed (see compute())
+
+		const attributeNodes = computePipeline.attributes;
 		const attributes = [];
-		const transformBuffers = [];
+		const transformAttributes = [];
 
 		for ( let i = 0; i < attributeNodes.length; i ++ ) {
 
-			const attribute = attributeNodes[ i ].node.attribute;
-
-			attributes.push( attribute );
-
-			if ( ! this.has( attribute ) ) this.attributeUtils.createAttribute( attribute, gl.ARRAY_BUFFER );
+			attributes.push( attributeNodes[ i ].node.attribute );
 
 		}
 
 		for ( let i = 0; i < transformAttributeNodes.length; i ++ ) {
 
-			const attribute = transformAttributeNodes[ i ].attribute;
-
-			if ( ! this.has( attribute ) ) this.attributeUtils.createAttribute( attribute, gl.ARRAY_BUFFER );
-
-			const attributeData = this.get( attribute );
-
-			transformBuffers.push( attributeData );
+			transformAttributes.push( transformAttributeNodes[ i ].attribute );
 
 		}
 
@@ -35854,7 +36773,7 @@ class WebGLBackend extends Backend {
 			programGPU,
 			fragmentShader,
 			vertexShader,
-			transformBuffers,
+			transformAttributes,
 			attributes
 		} );
 
@@ -36191,6 +37110,10 @@ class WebGLBackend extends Backend {
 	 * @param {BufferAttribute} attribute - The buffer attribute to destroy.
 	 */
 	destroyAttribute( attribute ) {
+
+		// VAOs keep the memory of attached buffers allocated
+
+		this.vertexArrayUtils.releaseBuffer( this.get( this.getBufferAttribute( attribute ) ) );
 
 		this.attributeUtils.destroyAttribute( attribute );
 
@@ -36607,55 +37530,6 @@ class WebGLBackend extends Backend {
 	}
 
 	/**
-	 * Creates a transform feedback from the given transform buffers.
-	 *
-	 * @private
-	 * @param {Array<DualAttributeData>} transformBuffers - The transform buffers.
-	 * @return {WebGLTransformFeedback} The transform feedback.
-	 */
-	_getTransformFeedback( transformBuffers ) {
-
-		let key = '';
-
-		for ( let i = 0; i < transformBuffers.length; i ++ ) {
-
-			const dualAttributeData = transformBuffers[ i ];
-
-			key += ':' + dualAttributeData.id + '|' + dualAttributeData.activeBufferIndex;
-
-		}
-
-		let transformFeedbackGPU = this.transformFeedbackCache[ key ];
-
-		if ( transformFeedbackGPU !== undefined ) {
-
-			return transformFeedbackGPU;
-
-		}
-
-		const { gl } = this;
-
-		transformFeedbackGPU = gl.createTransformFeedback();
-
-		gl.bindTransformFeedback( gl.TRANSFORM_FEEDBACK, transformFeedbackGPU );
-
-		for ( let i = 0; i < transformBuffers.length; i ++ ) {
-
-			const attributeData = transformBuffers[ i ];
-
-			gl.bindBufferBase( gl.TRANSFORM_FEEDBACK_BUFFER, i, attributeData.transformBuffer );
-
-		}
-
-		gl.bindTransformFeedback( gl.TRANSFORM_FEEDBACK, null );
-
-		this.transformFeedbackCache[ key ] = transformFeedbackGPU;
-
-		return transformFeedbackGPU;
-
-	}
-
-	/**
 	 * Setups the given bindings.
 	 *
 	 * @private
@@ -36897,8 +37771,6 @@ class WebGLBackend extends Backend {
 	async dispose() {
 
 		await super.dispose();
-
-		this.transformFeedbackCache = {};
 
 		if ( this.vertexArrayUtils !== null ) this.vertexArrayUtils.dispose();
 		if ( this.textureUtils !== null ) this.textureUtils.dispose();
@@ -37352,7 +38224,7 @@ class NodeStorageBuffer extends StorageBuffer {
 
 		const label = nodeUniform && nodeUniform.name ? nodeUniform.name : _id ++;
 
-		super( 'StorageBuffer_' + label, nodeUniform ? nodeUniform.value : null );
+		super( 'StorageBuffer_' + label );
 
 		/**
 		 * The node uniform.
@@ -42575,12 +43447,6 @@ class WGSLNodeBuilder extends NodeBuilder {
 
 			} else if ( type === 'buffer' || type === 'storageBuffer' || type === 'indirectStorageBuffer' ) {
 
-				if ( this.isCustomStruct( node ) ) {
-
-					return name;
-
-				}
-
 				return name + '.value';
 
 			} else {
@@ -42592,6 +43458,31 @@ class WGSLNodeBuilder extends NodeBuilder {
 		}
 
 		return super.getPropertyName( node );
+
+	}
+
+	/**
+	 * Returns the identifier the given node declares in the shader. Buffers are
+	 * accessed via `name.value` but declare `name` in the module scope.
+	 *
+	 * @param {Object} node - The node.
+	 * @return {string} The declaration name.
+	 */
+	getDeclarationName( node ) {
+
+		if ( node.isNodeUniform === true ) {
+
+			const type = node.type;
+
+			if ( type === 'buffer' || type === 'storageBuffer' || type === 'indirectStorageBuffer' ) {
+
+				return node.name;
+
+			}
+
+		}
+
+		return super.getDeclarationName( node );
 
 	}
 
@@ -42663,6 +43554,14 @@ class WGSLNodeBuilder extends NodeBuilder {
 					return NodeAccess.READ_ONLY;
 
 				}
+
+				return NodeAccess.READ_WRITE;
+
+			}
+
+			// Honor read-write for storage texture in the fragment stage.
+
+			if ( shaderStage === 'fragment' && node.isStorageTextureNode === true && node.access === NodeAccess.READ_WRITE ) {
 
 				return NodeAccess.READ_WRITE;
 
@@ -42779,8 +43678,6 @@ class WGSLNodeBuilder extends NodeBuilder {
 				bindings.push( buffer );
 
 				uniformGPU = buffer;
-
-				uniformNode.name = name ? name : 'NodeBuffer_' + uniformNode.id;
 
 			} else {
 
@@ -43525,21 +44422,6 @@ ${ flowData.code }
 
 	}
 
-	isCustomStruct( nodeUniform ) {
-
-		const attribute = nodeUniform.value;
-		const bufferNode = nodeUniform.node;
-
-		const isAttributeStructType = ( attribute.isBufferAttribute || attribute.isInstancedBufferAttribute ) && bufferNode.structTypeNode !== null;
-
-		const isStructArray =
-			( bufferNode.value && bufferNode.value.array ) &&
-			( typeof bufferNode.value.itemSize === 'number' && bufferNode.value.array.length > bufferNode.value.itemSize );
-
-		return isAttributeStructType && ! isStructArray;
-
-	}
-
 	/**
 	 * Returns the uniforms of the given shader stage as a WGSL string.
 	 *
@@ -43655,19 +44537,10 @@ ${ flowData.code }
 				const bufferCount = bufferNode.bufferCount;
 				const bufferCountSnippet = bufferCount > 0 && uniform.type === 'buffer' ? ', ' + bufferCount : '';
 				const bufferAccessMode = bufferNode.isStorageBufferNode ? `storage, ${ this.getStorageAccess( bufferNode, shaderStage ) }` : 'uniform';
+				const bufferTypeSnippet = bufferNode.isAtomic ? `atomic<${ bufferType }>` : `${ bufferType }`;
+				const bufferSnippet = `\tvalue : array< ${ bufferTypeSnippet }${ bufferCountSnippet } >`;
 
-				if ( this.isCustomStruct( uniform ) ) {
-
-					bufferSnippets.push( `@binding( ${ uniformIndexes.binding ++ } ) @group( ${ uniformIndexes.group } ) var<${ bufferAccessMode }> ${ uniform.name } : ${ bufferType };` );
-
-				} else {
-
-					const bufferTypeSnippet = bufferNode.isAtomic ? `atomic<${ bufferType }>` : `${ bufferType }`;
-					const bufferSnippet = `\tvalue : array< ${ bufferTypeSnippet }${ bufferCountSnippet } >`;
-
-					bufferSnippets.push( this._getWGSLStructBinding( uniform.name, bufferSnippet, bufferAccessMode, uniformIndexes.binding ++, uniformIndexes.group ) );
-
-				}
+				bufferSnippets.push( this._getWGSLStructBinding( uniform.name, bufferSnippet, bufferAccessMode, uniformIndexes.binding ++, uniformIndexes.group ) );
 
 			} else {
 
@@ -44631,10 +45504,10 @@ class WebGPUAttributeUtils {
 	 * new allocation.
 	 *
 	 * @async
-	 * @param {BufferAttribute} attribute - The storage buffer attribute to read frm.
-	 * @param {number} count - The offset from which to start reading the
-	 * @param {number} offset - The storage buffer attribute.
-	 * @param {ReadbackBuffer|ArrayBuffer} target - The storage buffer attribute.
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
 	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
 	async getArrayBufferAsync( attribute, target = null, offset = 0, count = -1 ) {
@@ -45868,6 +46741,10 @@ class WebGPUPipelineUtils {
 
 					_renderPipelineDescriptor.reset();
 
+					// Pop the error scope before awaiting the pipeline, so several pipelines
+					// can be created at the same time without mixing their error scopes.
+					const errorScopePromise = device.popErrorScope();
+
 					if ( pipelinePromise !== null ) {
 
 						try {
@@ -45882,7 +46759,7 @@ class WebGPUPipelineUtils {
 
 					}
 
-					const errorScope = await device.popErrorScope();
+					const errorScope = await errorScopePromise;
 
 					if ( errorScope !== null || asyncError !== null ) {
 
@@ -46025,6 +46902,10 @@ class WebGPUPipelineUtils {
 
 					_computePipelineDescriptor.reset();
 
+					// Pop the error scope before awaiting the pipeline, so several pipelines
+					// can be created at the same time without mixing their error scopes.
+					const errorScopePromise = device.popErrorScope();
+
 					if ( pipelinePromise !== null ) {
 
 						try {
@@ -46039,7 +46920,7 @@ class WebGPUPipelineUtils {
 
 					}
 
-					const errorScope = await device.popErrorScope();
+					const errorScope = await errorScopePromise;
 
 					if ( errorScope !== null || asyncError !== null ) {
 
@@ -47497,10 +48378,10 @@ class WebGPUBackend extends Backend {
 	 * new allocation.
 	 *
 	 * @async
-	 * @param {BufferAttribute} attribute - The storage buffer attribute to read frm.
-	 * @param {number} count - The offset from which to start reading the
-	 * @param {number} offset - The storage buffer attribute.
-	 * @param {ReadbackBuffer|ArrayBuffer} target - The storage buffer attribute.
+	 * @param {BufferAttribute} attribute - The storage buffer attribute to read from.
+	 * @param {?(ReadbackBuffer|ArrayBuffer)} [target=null] - The readback buffer or array buffer that receives the data. If `null`, a new array buffer is returned.
+	 * @param {number} [offset=0] - The byte offset to start reading from. Must be a multiple of 4.
+	 * @param {number} [count=-1] - The number of bytes to read. Must be a multiple of 4, or `-1` to read to the end of the buffer.
 	 * @return {Promise<ArrayBuffer|ReadbackBuffer>} A promise that resolves with the buffer data when the data are ready.
 	 */
 	async getArrayBufferAsync( attribute, target = null, offset = 0, count = -1 ) {
@@ -47980,19 +48861,20 @@ class WebGPUBackend extends Backend {
 
 		const device = this.device;
 		const occlusionQueryCount = renderContext.occlusionQueryCount;
+		const occlusionData = this.getOcclusionData( renderContext );
 
 		let occlusionQuerySet;
 
 		if ( occlusionQueryCount > 0 ) {
 
-			if ( renderContextData.currentOcclusionQuerySet ) renderContextData.currentOcclusionQuerySet.destroy();
-			if ( renderContextData.currentOcclusionQueryBuffer ) renderContextData.currentOcclusionQueryBuffer.destroy();
+			if ( occlusionData.currentOcclusionQuerySet ) occlusionData.currentOcclusionQuerySet.destroy();
+			if ( occlusionData.currentOcclusionQueryBuffer ) occlusionData.currentOcclusionQueryBuffer.destroy();
 
-			// Get a reference to the array of objects with queries. The renderContextData property
+			// Get a reference to the array of objects with queries. The occlusionData property
 			// can be changed by another render pass before the buffer.mapAsyc() completes.
-			renderContextData.currentOcclusionQuerySet = renderContextData.occlusionQuerySet;
-			renderContextData.currentOcclusionQueryBuffer = renderContextData.occlusionQueryBuffer;
-			renderContextData.currentOcclusionQueryObjects = renderContextData.occlusionQueryObjects;
+			occlusionData.currentOcclusionQuerySet = occlusionData.occlusionQuerySet;
+			occlusionData.currentOcclusionQueryBuffer = occlusionData.occlusionQueryBuffer;
+			occlusionData.currentOcclusionQueryObjects = occlusionData.occlusionQueryObjects;
 
 			//
 
@@ -48004,20 +48886,20 @@ class WebGPUBackend extends Backend {
 
 			_querySetDescriptor.reset();
 
-			renderContextData.occlusionQuerySet = occlusionQuerySet;
-			renderContextData.occlusionQueryIndex = 0;
-			renderContextData.occlusionQueryObjects = new Array( occlusionQueryCount );
+			occlusionData.occlusionQuerySet = occlusionQuerySet;
+			occlusionData.occlusionQueryIndex = 0;
+			occlusionData.occlusionQueryObjects = new Array( occlusionQueryCount );
 
-			renderContextData.lastOcclusionObject = null;
+			occlusionData.lastOcclusionObject = null;
 
-		} else if ( renderContextData.lastOcclusionObject !== undefined ) {
+		} else if ( occlusionData.lastOcclusionObject !== undefined ) {
 
 			// invalidate if there is a stale query
 
-			renderContextData.lastOcclusionObject = undefined;
+			occlusionData.lastOcclusionObject = undefined;
 
-			renderContextData.occlusionQuerySet.destroy();
-			renderContextData.occlusionQuerySet = undefined;
+			occlusionData.occlusionQuerySet.destroy();
+			occlusionData.occlusionQuerySet = undefined;
 
 		}
 
@@ -48507,6 +49389,7 @@ class WebGPUBackend extends Backend {
 
 		const renderContextData = this.get( renderContext );
 		const occlusionQueryCount = renderContext.occlusionQueryCount;
+		const occlusionData = this.getOcclusionData( renderContext );
 
 		if ( renderContextData.renderBundles.length > 0 ) {
 
@@ -48514,7 +49397,7 @@ class WebGPUBackend extends Backend {
 
 		}
 
-		const lastOcclusionObject = renderContextData.lastOcclusionObject;
+		const lastOcclusionObject = occlusionData.lastOcclusionObject;
 
 		if ( lastOcclusionObject && lastOcclusionObject.occlusionTest === true ) {
 
@@ -48661,10 +49544,10 @@ class WebGPUBackend extends Backend {
 			_bufferDescriptor.reset();
 
 			// two buffers required here - WebGPU doesn't allow usage of QUERY_RESOLVE & MAP_READ to be combined
-			renderContextData.encoder.resolveQuerySet( renderContextData.occlusionQuerySet, 0, occlusionQueryCount, queryResolveBuffer, 0 );
+			renderContextData.encoder.resolveQuerySet( occlusionData.occlusionQuerySet, 0, occlusionQueryCount, queryResolveBuffer, 0 );
 			renderContextData.encoder.copyBufferToBuffer( queryResolveBuffer, 0, readBuffer, 0, bufferSize );
 
-			renderContextData.occlusionQueryBuffer = readBuffer;
+			occlusionData.occlusionQueryBuffer = readBuffer;
 
 			//
 
@@ -48707,15 +49590,15 @@ class WebGPUBackend extends Backend {
 	 */
 	isOccluded( renderContext, object ) {
 
-		const renderContextData = this.get( renderContext );
+		const occlusionData = this.getOcclusionData( renderContext );
 
-		return renderContextData.occluded && renderContextData.occluded.has( object );
+		return occlusionData.occluded && occlusionData.occluded.has( object );
 
 	}
 
 	/**
 	 * This method processes the result of occlusion queries and writes it
-	 * into render context data.
+	 * into the occlusion data of the render context.
 	 *
 	 * @async
 	 * @param {RenderContext} renderContext - The render context.
@@ -48723,18 +49606,18 @@ class WebGPUBackend extends Backend {
 	 */
 	async resolveOccludedAsync( renderContext ) {
 
-		const renderContextData = this.get( renderContext );
+		const occlusionData = this.getOcclusionData( renderContext );
 
 		// handle occlusion query results
 
-		const { currentOcclusionQueryBuffer, currentOcclusionQueryObjects } = renderContextData;
+		const { currentOcclusionQueryBuffer, currentOcclusionQueryObjects } = occlusionData;
 
 		if ( currentOcclusionQueryBuffer && currentOcclusionQueryObjects ) {
 
 			const occluded = new WeakSet();
 
-			renderContextData.currentOcclusionQueryObjects = null;
-			renderContextData.currentOcclusionQueryBuffer = null;
+			occlusionData.currentOcclusionQueryObjects = null;
+			occlusionData.currentOcclusionQueryBuffer = null;
 
 			await currentOcclusionQueryBuffer.mapAsync( GPUMapMode.READ );
 
@@ -48755,7 +49638,7 @@ class WebGPUBackend extends Backend {
 
 			currentOcclusionQueryBuffer.destroy();
 
-			renderContextData.occluded = occluded;
+			occlusionData.occluded = occluded;
 
 		}
 
@@ -49441,26 +50324,28 @@ class WebGPUBackend extends Backend {
 
 					}
 
-				} else if ( renderContextData.occlusionQuerySet !== undefined ) {
+				} else if ( context.occlusionQueryCount > 0 ) {
 
-					const lastObject = renderContextData.lastOcclusionObject;
+					const occlusionData = this.getOcclusionData( context );
+
+					const lastObject = occlusionData.lastOcclusionObject;
 					if ( lastObject !== object ) {
 
 						if ( lastObject !== null && lastObject.occlusionTest === true ) {
 
 							renderContextData.currentPass.endOcclusionQuery();
-							renderContextData.occlusionQueryIndex ++;
+							occlusionData.occlusionQueryIndex ++;
 
 						}
 
 						if ( object.occlusionTest === true ) {
 
-							renderContextData.currentPass.beginOcclusionQuery( renderContextData.occlusionQueryIndex );
-							renderContextData.occlusionQueryObjects[ renderContextData.occlusionQueryIndex ] = object;
+							renderContextData.currentPass.beginOcclusionQuery( occlusionData.occlusionQueryIndex );
+							occlusionData.occlusionQueryObjects[ occlusionData.occlusionQueryIndex ] = object;
 
 						}
 
-						renderContextData.lastOcclusionObject = object;
+						occlusionData.lastOcclusionObject = object;
 
 					}
 
@@ -50058,6 +50943,20 @@ class WebGPUBackend extends Backend {
 	updateSize() {
 
 		this.delete( this.renderer.getCanvasTarget() );
+
+	}
+
+	/**
+	 * Frees the GPU resources of the given canvas target.
+	 *
+	 * @param {CanvasTarget} canvasTarget - The canvas target.
+	 */
+	destroyCanvasTarget( canvasTarget ) {
+
+		this.destroyTexture( canvasTarget.colorTexture );
+		this.destroyTexture( canvasTarget.depthTexture );
+
+		this.delete( canvasTarget );
 
 	}
 
@@ -50982,6 +51881,7 @@ class RenderPipeline {
  * material shaders. This avoids the intermediate framebuffer and output pass
  * used by {@link Renderer}, but changes blending and is not compatible with
  * materials that sample the framebuffer, such as transmissive materials.
+ * With the WebGL backend, `antialias` has no effect.
  *
  * ```js
  * const renderPipeline = new DirectRenderPipeline( renderer );
@@ -51193,9 +52093,12 @@ class DirectRenderPipeline extends RenderPipeline {
 
 				output.assign( materialOutputNode );
 
-				return outputColorTransform === true ?
-					renderOutput( pipelineOutputNode, toneMapping, outputColorSpace ) :
-					pipelineOutputNode;
+				if ( outputColorTransform === false ) return pipelineOutputNode;
+
+				const renderOutputNode = renderOutput( pipelineOutputNode, toneMapping, outputColorSpace );
+				renderOutputNode.premultipliedAlpha = builder.material.premultipliedAlpha;
+
+				return renderOutputNode;
 
 			}
 		} );
